@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageSlide_explore_id"
+        android:layout_width="251dp"
+        android:layout_height="251dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/explorecircle"
+        app:layout_constraintBottom_toTopOf="@id/textExplore_main_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageSlide_subExplore_id"
+        android:layout_width="153.85dp"
+        android:layout_height="125dp"
+        android:src="@drawable/exploreimage"
+        android:layout_marginTop="63dp"
+        android:layout_marginBottom="63dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginEnd="48.2dp"
+        app:layout_constraintTop_toTopOf="@id/imageSlide_explore_id"
+        app:layout_constraintBottom_toBottomOf="@id/imageSlide_explore_id"
+        app:layout_constraintStart_toStartOf="@id/imageSlide_explore_id"
+        app:layout_constraintEnd_toEndOf="@id/imageSlide_explore_id" />
+
+
+    <TextView
+        android:id="@+id/textExplore_main_id"
+        android:layout_width="118dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="19dp"
+        android:fontFamily="@font/sans_medium"
+        android:text="Explore"
+        android:textAlignment="center"
+        android:textColor="#343434"
+        android:textSize="31sp"
+        app:layout_constraintBottom_toTopOf="@id/textExplore_sub_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageSlide_explore_id" />
+
+
+    <TextView
+        android:id="@+id/textExplore_sub_id"
+        android:layout_width="300dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="36dp"
+        android:fontFamily="@font/sans_regular"
+        android:text="@string/on_boarding_text"
+        android:textAlignment="center"
+        android:textColor="#9EA9B1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/exploreIndicator_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textExplore_main_id" />
+
+
+    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+        android:id="@+id/exploreIndicator_id"
+        android:layout_width="81dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="15dp"
+        app:dotsColor="@android:color/holo_red_dark"
+        app:dotsCornerRadius="8dp"
+        app:dotsSize="16dp"
+        app:dotsSpacing="4dp"
+        app:dotsWidthFactor="2.5"
+        app:progressMode="true"
+        app:selectedDotColor="@color/md_blue_200"
+        app:dampingRatio="0.5"
+        app:dotsStrokeWidth="2dp"
+        app:stiffness="300"
+        app:layout_constraintBottom_toTopOf="@+id/buttonGetStarted_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textExplore_sub_id"
+         />
+
+
+
+    <Button
+        android:id="@+id/buttonGetStarted_id"
+        android:layout_width="336dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/bg_rounded_button"
+        android:fontFamily="@font/sans_medium"
+        android:text="Get Started"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/indicator_id"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

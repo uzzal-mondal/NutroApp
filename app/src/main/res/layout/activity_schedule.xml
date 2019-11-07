@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".schedule.ScheduleActivity">
+
+
+    <ImageView
+        android:id="@+id/image_bg_menu_id"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/bg_menu"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="23dp"
+        app:layout_constraintRight_toLeftOf="@+id/text_schedule_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/text_schedule_id"
+        android:layout_width="115dp"
+        android:layout_height="30dp"
+        android:text="@string/schedule"
+        android:layout_marginTop="35dp"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:fontFamily="@font/sans_medium"
+        android:textAlignment="textStart"
+        app:layout_constraintBottom_toTopOf="@+id/textHealthy_id"
+        app:layout_constraintRight_toLeftOf="@+id/imageSearch_id"
+        app:layout_constraintLeft_toRightOf="@+id/image_bg_menu_id"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageSearch_id"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:src="@drawable/bg_search"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintLeft_toRightOf="@+id/text_schedule_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textHealthy_id"
+        android:layout_width="135dp"
+        android:layout_height="28dp"
+        android:text="@string/healthy_recipes"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:textColor="#9EA9B1"
+        android:fontFamily="@font/sans_regular"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageSearch_id"/>
+
+
+
+
+    <com.vaibhavlakhera.circularprogressview.CircularProgressView
+        android:id="@+id/progressView1_id"
+        android:layout_width="118dp"
+        android:layout_height="118dp"
+        app:animate="true"
+        app:animateDuration="600"
+        app:fillColor="@color/color_white"
+        app:progress="50"
+        app:progressColor="@color/color_progress"
+        app:progressRoundCap="true"
+        app:progressTextColor="@color/color_black"
+        app:progressTextEnabled="true"
+        app:progressTextSize="32sp"
+        app:progressTextType="progress"
+        app:progressWidth="12dp"
+        app:startAngle="270"
+        app:total="100"
+        app:totalColor="@color/color_total_progress"
+        app:totalWidth="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintRight_toLeftOf="@+id/progressView2_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textHealthy_id"/>
+
+
+    <com.vaibhavlakhera.circularprogressview.CircularProgressView
+        android:id="@+id/progressView2_id"
+        android:layout_width="118dp"
+        android:layout_height="118dp"
+        app:animate="true"
+        app:animateDuration="600"
+        app:fillColor="@color/color_white"
+        app:progress="10"
+        app:progressColor="@color/color_progress_2"
+        app:progressRoundCap="true"
+        app:progressTextColor="@color/color_black"
+        app:progressTextEnabled="true"
+        app:progressTextSize="32sp"
+        app:progressTextType="progress"
+        app:progressWidth="12dp"
+        app:startAngle="270"
+        app:total="100"
+        app:totalColor="@color/color_total_progress"
+        app:totalWidth="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="41dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/progressView1_id"
+        app:layout_constraintTop_toBottomOf="@+id/textHealthy_id" />
+
+    <ImageView
+        android:id="@+id/image_kcal_id"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:src="@drawable/bg_kcal"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintRight_toLeftOf="@+id/text_kcal_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressView1_id"/>
+
+    <TextView
+        android:id="@+id/text_kcal_id"
+        android:layout_width="45dp"
+        android:layout_height="23dp"
+        android:text="@string/kcal"
+        android:textSize="20dp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/sans_medium"
+        android:textColor="#343434"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintRight_toLeftOf="@+id/image_fats_id"
+        app:layout_constraintTop_toBottomOf="@+id/progressView1_id"
+        app:layout_constraintLeft_toRightOf="@+id/image_kcal_id" />
+
+    <ImageView
+        android:id="@+id/image_fats_id"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:src="@drawable/bg_fats"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintRight_toLeftOf="@+id/textFats_id"
+        app:layout_constraintLeft_toRightOf="@+id/text_kcal_id"
+        app:layout_constraintTop_toBottomOf="@+id/progressView1_id"/>
+
+
+    <TextView
+        android:id="@+id/textFats_id"
+        android:layout_width="45dp"
+        android:layout_height="23dp"
+        android:text="Fats"
+        android:textSize="20dp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/sans_medium"
+        android:textColor="@color/color_text_fat"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="11dp"
+        app:layout_constraintLeft_toRightOf="@+id/image_fats_id"
+        app:layout_constraintTop_toBottomOf="@+id/progressView1_id" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout_calendar_id"
+        android:layout_width="335dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/constraint_participantes_id"
+        app:layout_constraintTop_toBottomOf="@+id/textFats_id">
+
+
+        <Spinner
+            android:id="@+id/spinner_id"
+            android:layout_width="155dp"
+            android:layout_height="40dp"
+            android:spinnerMode="dropdown"
+            android:background="@drawable/bg_spinner"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+        <CalendarView
+            android:id="@+id/calendarView_id"
+            android:layout_width="168dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_calendar"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+
+            />
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_participantes_id"
+        android:layout_width="330dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerSecondSchedule_id"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout_calendar_id">
+
+       <TextView
+           android:id="@+id/textPaticipants_id"
+           android:layout_width="120dp"
+           android:layout_height="21dp"
+           android:text="Pariticipants"
+           android:textColor="#9EA9B1"
+           android:textSize="18sp"
+           android:textAlignment="textStart"
+           android:fontFamily="@font/sans_regular"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintBottom_toTopOf="@+id/recycler_participants_id" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_participants_id"
+            android:layout_width="265dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toLeftOf="@+id/button_add_id"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textPaticipants_id">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <ImageButton
+            android:id="@+id/button_add_id"
+            android:layout_width="65dp"
+            android:layout_height="68dp"
+            android:background="@drawable/bg_circle_create_button"
+            android:src="@drawable/bg_add_id"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/recycler_participants_id"
+            app:layout_constraintTop_toBottomOf="@+id/textPaticipants_id" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerSecondSchedule_id"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraint_participantes_id" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

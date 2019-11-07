@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".splashscreen.SplashScreenActivity">
+
+
+    <TextView
+        android:id="@+id/textNutro_id"
+        android:layout_width="100dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/sans_medium"
+        android:text="Nutro"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#343434"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageNutro_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imageNutro_id"
+        android:layout_width="232.79dp"
+        android:layout_height="190dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/exploreimage"
+        app:layout_constraintBottom_toTopOf="@id/textNutro_sub_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textNutro_id" />
+
+    <TextView
+        android:id="@+id/textNutro_sub_id"
+        android:layout_width="291dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/sans_regular"
+        android:text="@string/on_boarding_text"
+        android:textAlignment="textStart"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/textNutroGetStarted_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageNutro_id" />
+
+    <TextView
+        android:id="@+id/textNutroGetStarted_id"
+        android:layout_width="103dp"
+        android:layout_height="21dp"
+        android:text="Get Started"
+        android:fontFamily="@font/sans_medium"
+        android:textSize="17sp"
+        android:textAlignment="textEnd"
+        android:textColor="#9EA9B1"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginEnd="214dp"
+        android:layout_marginBottom="65dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textNutro_sub_id"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

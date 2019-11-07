@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textHeading_id"
+        android:layout_width="300dp"
+        android:layout_height="38dp"
+        android:fontFamily="@font/sans_medium"
+        android:text="Welcome to Nutro"
+        android:textAlignment="center"
+        android:textColor="#343434"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@+id/textSub_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textSub_id"
+        android:layout_width="291dp"
+        android:layout_height="66dp"
+        android:text="@string/on_boarding_text"
+        android:textColor="#9EA9B1"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/sans_regular"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/image_rec_nutro_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textHeading_id" />
+
+    
+    <ImageView
+        android:id="@+id/image_rec_nutro_id"
+        android:layout_width="197.5dp"
+        android:layout_height="344dp"
+        android:background="@drawable/welcomenutro_rectangle"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintRight_toLeftOf="@+id/image_square_nutro_id"
+        app:layout_constraintLeft_toRightOf="@+id/image_square_nutro_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSub_id"
+        app:layout_constraintBottom_toTopOf="@+id/buttonNutro_id"
+
+        />
+
+     <ImageView
+         android:id="@+id/imageMakeSub_id"
+         android:layout_width="196dp"
+         android:layout_height="196dp"
+         android:src="@drawable/makeimage"
+         app:layout_constraintStart_toStartOf="@+id/image_rec_nutro_id"
+         app:layout_constraintEnd_toEndOf="@+id/image_rec_nutro_id"
+         app:layout_constraintTop_toTopOf="@+id/image_rec_nutro_id"
+         app:layout_constraintBottom_toBottomOf="@+id/image_rec_nutro_id" />
+
+
+    <ImageView
+        android:id="@+id/image_square_nutro_id"
+        android:layout_width="268dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/bg_square_nutro"
+        app:layout_constraintBottom_toTopOf="@+id/buttonNutro_id"
+        app:layout_constraintLeft_toRightOf="@+id/image_rec_nutro_id"
+        app:layout_constraintTop_toBottomOf="@+id/textSub_id"
+        app:layout_constraintVertical_bias="0.469" />
+
+
+
+    <ImageView
+        android:id="@+id/imageexploresub_id"
+        android:layout_width="wrap_content"
+        android:layout_height="196dp"
+        android:src="@drawable/exploreimage"
+        app:layout_constraintStart_toStartOf="@+id/image_square_nutro_id"
+        app:layout_constraintEnd_toEndOf="@+id/image_square_nutro_id"
+        app:layout_constraintTop_toTopOf="@+id/image_square_nutro_id"
+        app:layout_constraintBottom_toBottomOf="@+id/image_square_nutro_id" />
+
+
+    <Button
+        android:id="@+id/buttonNutro_id"
+        android:layout_width="336dp"
+        android:layout_height="60dp"
+        android:background="@drawable/bg_rounded_button"
+        android:fontFamily="@font/sans_medium"
+        android:text="Get Started"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

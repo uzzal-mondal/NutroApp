@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorTransparentWhite">#832222</color>
+    <color name="md_blue_200">#90CAF9</color>
+    <color name="text_color">#000000</color>
+    <color name="color_text">#6F8DA1</color>
+    <color name="color_black">#000000</color>
+    <color name="color_or_text">#CAD8E1</color>
+    <color name="color_white">#ffffff</color>
+    <color name="color_login_bg">#FF9DC0</color>
+    <color name="color_dot">#5DD9DE</color>
+    <color name="color_olson">#9EA9B1</color>
+    <color name="color_progress">#FF9DC0</color>
+    <color name="color_total_progress">#F1F7FB</color>
+    <color name="color_progress_2">#FFDC49</color>
+    <color name="color_text_fat">#343434</color>
+</resources>

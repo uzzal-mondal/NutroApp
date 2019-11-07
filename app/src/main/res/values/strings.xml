@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">NutroApp</string>
+
+    <string name="on_boarding_text">Without a doubt there is something\nvery relaxing and
+        pleasurable about\ncooking and eating fresh food.</string>
+
+
+    <string name="signup_text">Already have an\n account</string>
+
+    <string name="welcome_n_login_to_continue">Welcome,\n  Login to Continue</string>
+
+
+    <string name="we_have_sent_a_4_digit_number_on_n_your_phone">We have sent a 4 digit number on
+        your phone</string>
+
+
+    <string name="verify_your_nutro_account">Verify your Nutro Account</string>
+
+    <string name="text_eva_olson_string">Who can resist the mouth-watering pictures\n
+        in a cookbook? Who doesnot have childhood\n memories of the fragrances
+        that water from\n the kithchen on holidays, and even on regular,\n ordinary days?</string>
+
+
+    <string name="cook_book">
+        Who can resist the mouth-\n watering pictures in a cook book?
+    </string>
+    <string name="already_have_an_naccount">Already have an Account?</string>
+    <string name="text_account">Create your Account</string>
+    <string name="text_condition">I agree terms and condition</string>
+    <string name="text_explore">Explore</string>
+    <string name="text_continue">Continue</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot password</string>
+    <string name="create_account">Create Account</string>
+    <string name="text_nutro">Nutro</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="reciepts">Reciepts</string>
+    <string name="following">Following</string>
+    <string name="recently_added">Recently Added</string>
+    <string name="see_all">See All</string>
+    <string name="pomegranate_juice">Pomegranate Juice</string>
+    <string name="lula_long">Lula Long</string>
+    <string name="schedule">Schedule</string>
+    <string name="healthy_recipes">Healthy Recipes</string>
+    <string name="kcal">Kcal</string>
+    <string name="recipes">Recipes</string>
+
+
+    <string-array month="headings">
+        <item>Explore</item>
+        <item>Make</item>
+        <item>Share</item>
+    </string-array>
+
+
+    <string-array month="desc">
+
+        "Without a doubt there is something\n very relaxing and " +
+        "pleasurable about cooking and eating fresh food.",
+
+
+        <!-- "Without a doubt there is something\n very relaxing and " +
+        "pleasurable about cooking and eating fresh food.",
+
+
+        "Without a doubt there is something\n very relaxing and " +
+        "pleasurable about cooking and eating fresh food.",
+
+
+         "Without a doubt there is something\n very relaxing and " +
+        "pleasurable about cooking and eating fresh food."
+
+    -->
+
+    </string-array>
+
+
+</resources>
