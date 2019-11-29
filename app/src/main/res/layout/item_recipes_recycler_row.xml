@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginTop="5dp"
+
+
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imagebg_recips_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+
+        android:src="@drawable/recipes_1"
+        app:layout_constraintBottom_toTopOf="@+id/text_good_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageRecipesPlamsIcon_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+
+        android:src="@drawable/recipes_plams_icon"
+        app:layout_constraintStart_toStartOf="@+id/imagebg_recips_id"
+        app:layout_constraintTop_toTopOf="@+id/imagebg_recips_id"
+        app:layout_constraintEnd_toEndOf="@+id/imagebg_recips_id"
+        app:layout_constraintBottom_toBottomOf="@+id/imagebg_recips_id"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_good_id"
+        android:layout_width="217dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+
+        android:text="Good for Blueberry Muffins"
+        android:textColor="@color/color_black"
+        android:textSize="14sp"
+        app:fontFamily="@font/sans_medium"
+
+
+        app:layout_constraintRight_toLeftOf="@+id/iamge_wishes_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagebg_recips_id" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iamge_wishes_id"
+        android:layout_width="24dp"
+        android:layout_height="14dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginRight="8dp"
+
+        android:src="@drawable/like_icon"
+
+        app:layout_constraintLeft_toRightOf="@+id/text_good_id"
+        app:layout_constraintRight_toLeftOf="@+id/likes_thirteen_id"
+        app:layout_constraintTop_toBottomOf="@+id/imagebg_recips_id"
+
+
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/likes_thirteen_id"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginRight="8dp"
+
+        android:text="13"
+        android:textColor="@color/color_black"
+
+        android:textSize="14sp"
+        app:fontFamily="@font/sans_medium"
+
+        app:layout_constraintLeft_toRightOf="@+id/iamge_wishes_id"
+        app:layout_constraintRight_toLeftOf="@+id/likesTv_id"
+
+        app:layout_constraintTop_toBottomOf="@+id/imagebg_recips_id" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/likesTv_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginLeft="4dp"
+
+
+        android:textSize="14sp"
+        app:fontFamily="@font/sans_medium"
+
+        android:text="Likes"
+        android:textColor="@color/color_black"
+
+        app:layout_constraintLeft_toRightOf="@+id/likes_thirteen_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagebg_recips_id" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/calories_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+
+
+        android:text="calories"
+        app:fontFamily="@font/sans_regular"
+        android:textSize="14sp"
+        android:textColor="@color/color_calories"
+
+        app:layout_constraintRight_toLeftOf="@+id/text_count_id"
+        app:layout_constraintTop_toBottomOf="@+id/text_good_id"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_count_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+
+
+        android:text="30"
+        app:fontFamily="@font/sans_regular"
+        android:textSize="14sp"
+        android:textColor="#9EA9B1"
+
+        app:layout_constraintRight_toLeftOf="@+id/text_time_id"
+        app:layout_constraintLeft_toRightOf="@+id/calories_id"
+        app:layout_constraintTop_toBottomOf="@+id/text_good_id"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_time_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+
+        android:layout_marginBottom="12dp"
+
+        android:text="1 h"
+        app:fontFamily="@font/sans_regular"
+        android:textSize="14sp"
+        android:textColor="#9EA9B1"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/text_count_id"
+        app:layout_constraintTop_toBottomOf="@+id/text_good_id" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

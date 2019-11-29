@@ -1,13 +1,18 @@
 <resources>
     <string name="app_name">NutroApp</string>
 
-    <string name="on_boarding_text">Without a doubt there is something\nvery relaxing and
-        pleasurable about\ncooking and eating fresh food.</string>
+
+    <string name="open">open</string>
+    <string name="close">close</string>
 
 
-    <string name="signup_text">Already have an\n account</string>
+    <string name="on_boarding_text">Without a doubt there is something very relaxing and
+        pleasurable about cooking and eating fresh food.</string>
 
-    <string name="welcome_n_login_to_continue">Welcome,\n  Login to Continue</string>
+
+    <string name="signup_text">Already have an account</string>
+
+    <string name="welcome_login_continue">Welcome,\n Login to Continue</string>
 
 
     <string name="we_have_sent_a_4_digit_number_on_n_your_phone">We have sent a 4 digit number on
@@ -16,21 +21,27 @@
 
     <string name="verify_your_nutro_account">Verify your Nutro Account</string>
 
-    <string name="text_eva_olson_string">Who can resist the mouth-watering pictures\n
-        in a cookbook? Who doesnot have childhood\n memories of the fragrances
-        that water from\n the kithchen on holidays, and even on regular,\n ordinary days?</string>
+    <string name="text_eva_olson_string">Who can resist the mouth-watering pictures
+        in a cookbook? Who doesnot have childhood memories of the fragrances
+        that water from the kithchen on holidays, and even on regular, ordinary days?</string>
+
+
+    <!--      recycler adapter pass data..-->
+    <string name="good_text">Good for Blueberry Muffins</string>
+    <string name="wish_text">13 Likes</string>
+    <string name="calories_text">Calories</string>
+    <string name="time_text">1 h</string>
 
 
     <string name="cook_book">
         Who can resist the mouth-\n watering pictures in a cook book?
     </string>
     <string name="already_have_an_naccount">Already have an Account?</string>
-    <string name="text_account">Create your Account</string>
     <string name="text_condition">I agree terms and condition</string>
     <string name="text_explore">Explore</string>
     <string name="text_continue">Continue</string>
     <string name="enter_your_email">Enter your email</string>
-    <string name="password">Password</string>
+    <string name="password">password</string>
     <string name="forgot_password">Forgot password</string>
     <string name="create_account">Create Account</string>
     <string name="text_nutro">Nutro</string>
@@ -45,35 +56,33 @@
     <string name="healthy_recipes">Healthy Recipes</string>
     <string name="kcal">Kcal</string>
     <string name="recipes">Recipes</string>
-
-
-    <string-array month="headings">
-        <item>Explore</item>
-        <item>Make</item>
-        <item>Share</item>
-    </string-array>
-
-
-    <string-array month="desc">
-
-        "Without a doubt there is something\n very relaxing and " +
-        "pleasurable about cooking and eating fresh food.",
-
-
-        <!-- "Without a doubt there is something\n very relaxing and " +
-        "pleasurable about cooking and eating fresh food.",
-
-
-        "Without a doubt there is something\n very relaxing and " +
-        "pleasurable about cooking and eating fresh food.",
-
-
-         "Without a doubt there is something\n very relaxing and " +
-        "pleasurable about cooking and eating fresh food."
-
-    -->
-
-    </string-array>
+    <string name="butter_ten_gram">30 g</string>
+    <string name="milk_forty_gram">60 g</string>
+    <string name="orange_hundred_gram">90 g</string>
+    <string name="explore">Explore</string>
+    <string name="get_started">Get Started</string>
+    <string name="facebook">Facebook</string>
+    <string name="or">Or</string>
+    <string name="follow">Follow</string>
+    <string name="all">All</string>
+    <string name="fruits">Fruits</string>
+    <string name="veg">Veg</string>
+    <string name="sweet">Sweets</string>
+    <string name="sign_in">sign in</string>
+    <string name="confirm_password">confirm password</string>
+    <string name="login">Login</string>
+    <string name="welcome_to_nutro">Welcome to Nutro</string>
+    <string name="create_your_account">Create your account</string>
+    <string name="eva_olson">Eva Olson</string>
+    <string name="sweets">Sweets</string>
+    <string name="weekly_03">Weekly 03</string>
+    <string name="calories_burned">Calories\n burned</string>
+    <string name="cast_iron_cookware_26_may_2019">Cast Iron Cookware\n 26 May 2019</string>
+    <string name="cooking_with_the_power_of_the_sun_30_aug_2019">Cooking with the power sun\n 30 Aug 2019</string>
+    <string name="cook_wisely_avoid_database_23_sep_2019">cook wisely avoid database\n 23 sep 2019</string>
+    <string name="save_money_the_crock_pot_way_06_jan_2019">Save Money The Crock Pot\n 06 Jan 2019</string>
+    <string name="planing_breakfast">Planning breakfast for dinner is a good way to serveup simple</string>
+    <string name="fresh_forse">Fresh Forse</string>
 
 
 </resources>

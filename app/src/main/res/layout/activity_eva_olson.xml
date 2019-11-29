@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    tools:context=".evaolson_social_02.EvaOlsonActivity">
+
+
+
+    <include
+        android:id="@+id/includelayout_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        layout="@layout/custom_tool_bso"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+<!--    constraint to eva olson id.. -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintfast"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+
+
+        android:layout_marginTop="72dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/constraintsecond"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profileimg"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:src="@drawable/circle_image_eva_olson"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/color_white"
+
+            app:layout_constraintRight_toLeftOf="@+id/evatex"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/evatex"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="24dp"
+            android:text="Eva Olson"
+            android:textSize="24sp"
+            android:textColor="@color/color_black"
+            app:fontFamily="@font/sans_medium"
+
+            app:layout_constraintBottom_toTopOf="@+id/hundredtext"
+            app:layout_constraintLeft_toRightOf="@+id/profileimg"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/hundredtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+
+            android:text="101"
+            android:textColor="@color/color_black"
+            android:textSize="16sp"
+
+            app:fontFamily="@font/sans_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/profileimg"
+            app:layout_constraintRight_toLeftOf="@+id/flowerstext"
+            app:layout_constraintTop_toBottomOf="@+id/evatex" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/flowerstext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+
+            android:text="Followers"
+            android:textColor="#9EA9B1"
+            android:textSize="14sp"
+            app:fontFamily="@font/sans_regular"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/hundredtext"
+            app:layout_constraintRight_toLeftOf="@+id/imageviewid"
+            app:layout_constraintTop_toBottomOf="@+id/evatex" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageviewid"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+
+            android:src="@drawable/bg_olson_view"
+            android:scaleType="center"
+
+
+            app:layout_constraintRight_toLeftOf="@+id/count"
+            app:layout_constraintLeft_toRightOf="@+id/flowerstext"
+            app:layout_constraintTop_toBottomOf="@+id/evatex"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/sans_medium"
+            android:text="800"
+            android:gravity="center"
+            android:textColor="@color/color_black"
+            android:textSize="16sp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/imageviewid"
+            app:layout_constraintRight_toLeftOf="@+id/flowing"
+            app:layout_constraintTop_toBottomOf="@+id/evatex"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/flowing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="26dp"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            android:text="Flowing"
+            android:fontFamily="@font/sans_regular"
+            android:textSize="14sp"
+            android:textColor="#9EA9B1"
+
+            app:layout_constraintLeft_toRightOf="@+id/count"
+            app:layout_constraintTop_toBottomOf="@+id/evatex"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <!--    constraint to circle image view id-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintsecond"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/cardview"
+        app:layout_constraintTop_toBottomOf="@+id/constraintfast">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/circularimage"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="#FF9DC0"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FF9DC0"
+
+            app:layout_constraintRight_toLeftOf="@+id/circularimage2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="30dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_glass"
+
+            app:layout_constraintStart_toStartOf="@+id/circularimage"
+            app:layout_constraintEnd_toEndOf="@+id/circularimage"
+            app:layout_constraintTop_toTopOf="@+id/circularimage"
+            app:layout_constraintBottom_toBottomOf="@+id/circularimage"/>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circularimage2"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="8dp"
+            android:src="#F0F6FA"
+            app:civ_border_color="#F0F6FA"
+            app:civ_border_width="2dp"
+
+            app:layout_constraintRight_toLeftOf="@+id/circularimage3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/circularimage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_eva_circle"
+
+            app:layout_constraintStart_toStartOf="@+id/circularimage2"
+            app:layout_constraintEnd_toEndOf="@+id/circularimage2"
+            app:layout_constraintTop_toTopOf="@+id/circularimage"
+            app:layout_constraintBottom_toBottomOf="@+id/circularimage2"/>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/circularimage3"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="#F0F6FA"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#F0F6FA"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+
+
+            app:layout_constraintRight_toLeftOf="@+id/circularimage4"
+            app:layout_constraintLeft_toRightOf="@+id/circularimage2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_tree"
+
+            app:layout_constraintStart_toStartOf="@+id/circularimage3"
+            app:layout_constraintEnd_toEndOf="@+id/circularimage3"
+            app:layout_constraintTop_toTopOf="@+id/circularimage3"
+            app:layout_constraintBottom_toBottomOf="@+id/circularimage3"/>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/circularimage4"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="#F0F6FA"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#F0F6FA"
+
+
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/circularimage3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_bread"
+
+            app:layout_constraintStart_toStartOf="@+id/circularimage4"
+            app:layout_constraintEnd_toEndOf="@+id/circularimage4"
+            app:layout_constraintTop_toTopOf="@+id/circularimage4"
+            app:layout_constraintBottom_toBottomOf="@+id/circularimage4"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="24dp"
+
+
+        app:cardCornerRadius="25dp"
+        android:padding="10dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintsecond">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="460dp"
+
+
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/handtext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+
+
+                android:text="Hand Grenade Cocktail"
+                android:textColor="@color/color_black"
+                android:textSize="16sp"
+                app:fontFamily="@font/sans_medium"
+
+                app:layout_constraintBottom_toTopOf="@+id/timeaccess"
+                app:layout_constraintRight_toLeftOf="@+id/favouriteimg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/favouriteimg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+
+                android:layout_marginTop="16dp"
+
+
+                android:src="@drawable/ic_favorite"
+                app:layout_constraintLeft_toRightOf="@+id/handtext"
+                app:layout_constraintRight_toLeftOf="@+id/like"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/like"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+
+              android:layout_marginRight="20dp"
+
+
+
+                android:text="10 Likes"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:fontFamily="@font/sans_medium"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/favouriteimg"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/timeaccess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+
+                android:src="@drawable/ic_access_time"
+                app:layout_constraintRight_toLeftOf="@+id/minclock"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/handtext" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/minclock"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+
+
+                android:text="15 min clock"
+                android:textColor="@color/color_black"
+                android:textSize="16sp"
+                app:fontFamily="@font/sans_medium"
+
+                app:layout_constraintBottom_toTopOf="@+id/spinner"
+                app:layout_constraintLeft_toRightOf="@+id/timeaccess"
+                app:layout_constraintTop_toBottomOf="@+id/handtext" />
+
+
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+
+                android:background="@drawable/bg_eva_spinner"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/progresshow"
+                app:layout_constraintRight_toLeftOf="@+id/showbtn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/minclock" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/showbtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_goneMarginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/color_border"
+
+                android:gravity="center"
+                android:text="Show Reciept"
+                android:textAllCaps="false"
+                android:textColor="#343434"
+
+                app:layout_constraintBottom_toTopOf="@+id/progresshowsecond"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/spinner"
+                app:layout_constraintTop_toBottomOf="@+id/minclock" />
+
+
+
+
+
+
+            <com.vaibhavlakhera.circularprogressview.CircularProgressView
+                android:id="@+id/progresshow"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="10dp"
+
+
+                android:padding="30dp"
+                app:animate="true"
+                app:animateDuration="600"
+                app:fillColor="@color/color_white"
+                app:layout_constraintRight_toLeftOf="@+id/progresshowsecond"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinner"
+                app:progress="450"
+                app:progressColor="#FFDC49"
+                app:progressRoundCap="true"
+                app:progressTextColor="@color/color_black"
+
+                app:progressTextEnabled="true"
+                app:progressTextSize="26sp"
+                app:progressTextType="progress"
+
+                app:startAngle="270"
+                app:total="450"
+                app:totalColor="@color/color_total_progress" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:text="Cal"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/progresshow"
+                app:layout_constraintEnd_toEndOf="@+id/progresshow"
+                app:layout_constraintStart_toStartOf="@+id/progresshow"
+                app:layout_constraintTop_toTopOf="@+id/progresshow" />
+
+
+            <com.vaibhavlakhera.circularprogressview.CircularProgressView
+                android:id="@+id/progresshowsecond"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="24dp"
+
+
+                android:padding="30dp"
+                app:animate="true"
+
+                app:animateDuration="600"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/progresshow"
+                app:layout_constraintTop_toBottomOf="@+id/spinner"
+                app:progress="150"
+                app:progressColor="#898FDD"
+                app:progressRoundCap="true"
+                app:progressTextColor="@color/color_black"
+
+                app:progressTextEnabled="true"
+                app:progressTextSize="26sp"
+                app:progressTextType="progress"
+
+                app:startAngle="270"
+                app:total="600"
+                app:totalColor="@color/color_total_progress" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:text="Fats"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/progresshowsecond"
+                app:layout_constraintEnd_toEndOf="@+id/progresshowsecond"
+                app:layout_constraintStart_toStartOf="@+id/progresshowsecond"
+                app:layout_constraintTop_toTopOf="@+id/progresshowsecond" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="0dp"
+                android:layout_height="240dp"
+                android:src="@drawable/exploreimage"
+
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/progresshow"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

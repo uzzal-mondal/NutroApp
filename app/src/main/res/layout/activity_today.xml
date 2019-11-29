@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".todayspecial_social_01.TodayActivity">
+
+    <include
+        android:id="@+id/includelayout_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        layout="@layout/custom_tool_bso"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/todaytext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Today's Special"
+        android:gravity="center"
+        android:layout_marginTop="64dp"
+        android:textColor="@color/color_black"
+        android:textSize="24sp"
+        android:fontFamily="@font/sans_medium"
+        app:layout_constraintBottom_toTopOf="@+id/recyclertoday"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclertoday"
+        android:layout_width="0dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintBottom_toTopOf="@+id/textplaces"
+        app:layout_constraintTop_toBottomOf="@+id/todaytext">
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textplaces"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:gravity="start"
+        android:textColor="@color/black"
+        app:fontFamily="@font/sans_medium"
+        android:text="Places"
+
+        app:layout_constraintBottom_toTopOf="@+id/recyclerplaceid"
+        app:layout_constraintTop_toBottomOf="@+id/recyclertoday"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"
+
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerplaceid"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/bottom_menu_action_id"
+        app:layout_constraintTop_toBottomOf="@+id/textplaces"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+
+        android:id="@+id/bottom_menu_action_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+
+        app:menu="@menu/bottom_menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerplaceid" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

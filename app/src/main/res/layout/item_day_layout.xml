@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <!--    second card view-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardviewstatics"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="72dp"
+        app:cardCornerRadius="32dp"
+       app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintprogress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/sevenday"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="120dp"
+
+                android:text="Last 7 Days "
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:fontFamily="@font/sans_medium"
+                android:gravity="start"
+
+
+
+                app:layout_constraintBottom_toTopOf="@+id/spinershowid"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+
+            <Spinner
+                android:id="@+id/spinershowid"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="16dp"
+
+                android:background="@drawable/bg_spinner_day"
+                android:gravity="center"
+
+                app:layout_constraintBottom_toTopOf="@+id/constrantcircle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sevenday"/>
+
+            <!--            image between design-->
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="32dp"
+                android:src="@drawable/ic_explore_5"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_explore_6"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+
+
+
+            <!--            circle progress view design   -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constrantcircle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/recyclerslide"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinershowid">
+
+
+
+                <com.vaibhavlakhera.circularprogressview.CircularProgressView
+                    android:id="@+id/progressshowimagecarbo"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+
+                    android:padding="30dp"
+                    app:animate="true"
+                    app:animateDuration="600"
+                    app:fillColor="@color/color_white"
+
+                    app:progress="90"
+                    app:progressColor="#FFDC49"
+                    app:progressRoundCap="true"
+                    app:progressTextColor="@color/color_black"
+                    app:progressTextEnabled="true"
+                    app:progressTextSize="26sp"
+                    app:progressTextType="progress"
+                    app:startAngle="270"
+                    app:total="150"
+                    app:totalColor="@color/color_total_progress"
+
+                    app:layout_constraintRight_toLeftOf="@+id/progressshowprotin"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+
+                    android:text="Carbo-h"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/sans_regular"
+
+
+                    app:layout_constraintStart_toStartOf="@+id/progressshowimagecarbo"
+                    app:layout_constraintEnd_toEndOf="@+id/progressshowimagecarbo"
+                    app:layout_constraintTop_toTopOf="@+id/progressshowimagecarbo"
+                    app:layout_constraintBottom_toBottomOf="@+id/progressshowimagecarbo" />
+
+
+                <com.vaibhavlakhera.circularprogressview.CircularProgressView
+                    android:id="@+id/progressshowprotin"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="48dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+
+                    android:padding="30dp"
+                    app:animate="true"
+                    app:animateDuration="600"
+
+                    app:progress="300"
+                    app:progressColor="#FF9DC0"
+                    app:progressRoundCap="true"
+                    app:progressTextColor="@color/color_black"
+                    app:progressTextEnabled="true"
+                    app:progressTextSize="26sp"
+                    app:progressTextType="progress"
+                    app:startAngle="270"
+                    app:total="600"
+                    app:totalColor="@color/color_total_progress"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/progressshowimagecarbo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+
+                    android:text="Protein"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/sans_regular"
+
+                    app:layout_constraintStart_toStartOf="@+id/progressshowprotin"
+                    app:layout_constraintEnd_toEndOf="@+id/progressshowprotin"
+                    app:layout_constraintTop_toTopOf="@+id/progressshowprotin"
+                    app:layout_constraintBottom_toBottomOf="@+id/progressshowprotin" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerslide"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+
+                app:layout_constraintBottom_toTopOf="@+id/viewline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constrantcircle">
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+            <View
+                android:id="@+id/viewline"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="#c0c0c0"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="120dp"
+                android:layout_marginEnd="120dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerslide"/>
+
+
+
+
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

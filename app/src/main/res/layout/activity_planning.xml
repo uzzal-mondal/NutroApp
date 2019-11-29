@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".planning_stats_06.PlanningActivity">
+
+
+    <include
+        android:id="@+id/includelayout_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        layout="@layout/custom_statas_toolbar"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/planningtex"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:layout_marginBottom="24dp"
+
+
+        android:textSize="20sp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="start"
+        android:textColor="@color/black"
+        app:fontFamily="@font/sans_medium"
+        android:text="Planning"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/cardplanning" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardplanning"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/planningtex"
+        app:layout_constraintBottom_toTopOf="@+id/constraintsecondplan"
+
+
+
+        app:cardCornerRadius="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintprogress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textposttotal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:text="Post Total"
+            app:fontFamily="@font/sans_medium"
+            android:textAllCaps="false"
+            android:gravity="start"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            app:layout_constraintRight_toLeftOf="@+id/textposttotal_id"
+            app:layout_constraintBottom_toTopOf="@+id/progressView1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textposttotal_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="30%"
+            android:textSize="14sp"
+            android:fontFamily="@font/sans_regular"
+            android:textAllCaps="false"
+            android:textAlignment="textEnd"
+
+            android:layout_marginEnd="8dp"
+            app:layout_constraintLeft_toRightOf="@+id/textposttotal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <com.skydoves.progressview.ProgressView
+            android:id="@+id/progressView1"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+
+            app:progressView_colorBackground="@color/color_white"
+            app:progressView_colorProgress="#FF9DC0"
+            app:progressView_labelColorOuter="#000"
+
+            app:progressView_progress="30"
+            app:progressView_max="100"
+            app:progressView_autoAnimate="true"
+            app:progressView_radius="8dp"
+            app:progressView_padding="1dp"
+
+            app:progressView_labelSize="13sp"
+            app:progressView_labelSpace="10dp"
+            app:progressView_labelTypeface="bold"
+
+            android:layout_marginEnd="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/textdelivary"
+            app:layout_constraintTop_toBottomOf="@+id/textposttotal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textdelivary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Delivery"
+            app:fontFamily="@font/sans_medium"
+            android:textAllCaps="false"
+            android:textAlignment="textStart"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="15dp"
+
+            app:layout_constraintRight_toLeftOf="@+id/textdelivary_id"
+            app:layout_constraintBottom_toTopOf="@+id/progressView2"
+            app:layout_constraintTop_toBottomOf="@+id/progressView1"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textdelivary_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="10%"
+            android:textSize="14sp"
+            android:fontFamily="@font/sans_regular"
+            android:textAllCaps="false"
+            android:textAlignment="textEnd"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textposttotal"
+            app:layout_constraintLeft_toRightOf="@+id/textdelivary"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+        <com.skydoves.progressview.ProgressView
+            android:id="@+id/progressView2"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            app:progressView_colorBackground="@color/color_white"
+            app:progressView_colorProgress="#FFDC49"
+            app:progressView_progress="60"
+            app:progressView_max="100"
+            app:progressView_autoAnimate="true"
+            app:progressView_radius="8dp"
+            app:progressView_padding="1dp"
+            app:progressView_labelColorOuter="#000"
+            app:progressView_labelSize="13sp"
+            app:progressView_labelSpace="10dp"
+            app:progressView_labelTypeface="bold"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/textdelivary"
+            app:layout_constraintBottom_toTopOf="@+id/textspend"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textspend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Spend"
+            app:fontFamily="@font/sans_medium"
+            android:textAllCaps="false"
+            android:gravity="start"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="15dp"
+            app:layout_constraintRight_toLeftOf="@+id/textspend_id"
+            app:layout_constraintBottom_toTopOf="@+id/progressView3"
+            app:layout_constraintTop_toBottomOf="@+id/progressView2"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+        <com.skydoves.progressview.ProgressView
+            android:id="@+id/progressView3"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            app:progressView_colorBackground="@color/color_white"
+            app:progressView_colorProgress="#5DD9DE"
+            app:progressView_progress="90"
+            app:progressView_max="100"
+            app:progressView_autoAnimate="true"
+            app:progressView_radius="8dp"
+            app:progressView_padding="1dp"
+            app:progressView_labelColorOuter="#000"
+            app:progressView_labelSize="13sp"
+            app:progressView_labelSpace="10dp"
+            app:progressView_labelTypeface="bold"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/textspend"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textspend_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="60%"
+            android:textSize="14sp"
+            android:fontFamily="@font/sans_regular"
+            android:textAllCaps="false"
+            android:textAlignment="textEnd"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintLeft_toRightOf="@+id/textspend"
+            app:layout_constraintTop_toBottomOf="@+id/textdelivary_id"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintsecondplan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardplanning">
+
+
+
+<!--        first step progress, text and 3/5 text..-->
+        <com.skydoves.progressview.ProgressView
+            android:id="@+id/progressfirst"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="20dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/progressecond"
+
+            app:progressView_colorBackground="#079FA5"
+            app:progressView_colorProgress="#47C9CF"
+            app:progressView_labelColorOuter="#000"
+
+            app:progressView_highlightAlpha="0.8"
+            app:progressView_highlightWidth="100dp"
+
+            app:progressView_labelSize="150sp"
+            app:progressView_labelSpace="50dp"
+            app:layout_constraintCircleRadius="500dp"
+
+
+            app:progressView_orientation="horizontal"
+            app:progressView_progress="60"
+            app:progressView_radius="12dp"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+       <!--  app:progressView_highlightColor="#000"
+            app:progressView_labelColorInner="@color/white"
+            app:progressView_labelTypeface="bold"  -->
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:paddingLeft="8dp"
+
+            android:text="@string/cast_iron_cookware_26_may_2019"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            app:fontFamily="@font/sans_medium"
+            android:textColor="@color/color_white"
+            app:layout_constraintStart_toStartOf="@+id/progressfirst"
+            app:layout_constraintTop_toTopOf="@+id/progressfirst"
+            app:layout_constraintBottom_toBottomOf="@+id/progressfirst" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+
+            android:text="3/5"
+            android:textColor="@color/color_white"
+            android:textSize="16sp"
+            app:fontFamily="@font/sans_medium"
+
+
+            app:layout_constraintEnd_toEndOf="@+id/progressfirst"
+            app:layout_constraintTop_toTopOf="@+id/progressfirst"
+            app:layout_constraintBottom_toBottomOf="@+id/progressfirst" />
+
+
+
+<!--        second step cooking-->
+        <com.skydoves.progressview.ProgressView
+            android:id="@+id/progressecond"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="20dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressfirst"
+            app:layout_constraintBottom_toTopOf="@+id/progresthird"
+
+            app:progressView_colorBackground="#F8749F"
+            app:progressView_colorProgress="#FF9DC0"
+            app:progressView_labelColorOuter="#000"
+
+            app:progressView_highlightAlpha="0.8"
+            app:progressView_highlightWidth="100dp"
+
+            app:progressView_labelSize="150sp"
+            app:progressView_labelSpace="50dp"
+            app:layout_constraintCircleRadius="500dp"
+
+
+            app:progressView_orientation="horizontal"
+            app:progressView_progress="80"
+            app:progressView_radius="12dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:paddingLeft="8dp"
+
+            android:text="@string/cooking_with_the_power_of_the_sun_30_aug_2019"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            app:fontFamily="@font/sans_medium"
+            android:textColor="@color/color_white"
+            app:layout_constraintStart_toStartOf="@+id/progressecond"
+            app:layout_constraintTop_toTopOf="@+id/progressecond"
+            app:layout_constraintBottom_toBottomOf="@+id/progressecond" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+
+            android:text="8/16"
+            android:textColor="@color/color_white"
+            android:textSize="16sp"
+            app:fontFamily="@font/sans_medium"
+
+
+            app:layout_constraintEnd_toEndOf="@+id/progressecond"
+            app:layout_constraintTop_toTopOf="@+id/progressecond"
+            app:layout_constraintBottom_toBottomOf="@+id/progressecond" />
+
+
+<!--        third step cooking..  in android... -->
+        <com.skydoves.progressview.ProgressView
+            android:id="@+id/progresthird"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="20dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressecond"
+            app:layout_constraintBottom_toTopOf="@+id/progrefourth"
+
+            app:progressView_colorBackground="#D9B520"
+            app:progressView_colorProgress="#F5D23E"
+            app:progressView_labelColorOuter="#000"
+
+            app:progressView_highlightAlpha="0.8"
+            app:progressView_highlightWidth="100dp"
+
+            app:progressView_labelSize="150sp"
+            app:progressView_labelSpace="50dp"
+            app:layout_constraintCircleRadius="500dp"
+
+
+            app:progressView_orientation="horizontal"
+            app:progressView_progress="40"
+            app:progressView_radius="12dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:paddingLeft="8dp"
+
+            android:text="Current Cooking for pleasure"
+
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            app:fontFamily="@font/sans_medium"
+            android:textColor="@color/color_white"
+            app:layout_constraintStart_toStartOf="@+id/progresthird"
+            app:layout_constraintTop_toTopOf="@+id/progresthird"
+            app:layout_constraintBottom_toBottomOf="@+id/progresthird" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+
+            android:text="10/10"
+            android:textColor="@color/color_white"
+            android:textSize="16sp"
+            app:fontFamily="@font/sans_medium"
+
+
+            app:layout_constraintEnd_toEndOf="@+id/progresthird"
+            app:layout_constraintTop_toTopOf="@+id/progresthird"
+            app:layout_constraintBottom_toBottomOf="@+id/progresthird" />
+
+
+
+
+        <!--        fourth step cooking..  in android... -->
+        <com.skydoves.progressview.ProgressView
+            android:id="@+id/progrefourth"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="20dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progresthird"
+            app:layout_constraintBottom_toTopOf="@+id/progressfifth"
+
+            app:progressView_colorBackground="#F1F7FB"
+            app:progressView_colorProgress="#F1F7FB"
+            app:progressView_labelColorOuter="#000"
+
+            app:progressView_highlightAlpha="0.8"
+            app:progressView_highlightWidth="100dp"
+
+            app:progressView_labelSize="150sp"
+            app:progressView_labelSpace="50dp"
+            app:layout_constraintCircleRadius="500dp"
+
+
+            app:progressView_orientation="horizontal"
+            app:progressView_progress="40"
+            app:progressView_radius="12dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:paddingLeft="8dp"
+
+            android:text="@string/cook_wisely_avoid_database_23_sep_2019"
+
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            app:fontFamily="@font/sans_medium"
+            android:textColor="@color/color_black"
+            app:layout_constraintStart_toStartOf="@+id/progrefourth"
+            app:layout_constraintTop_toTopOf="@+id/progrefourth"
+            app:layout_constraintBottom_toBottomOf="@+id/progrefourth" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+
+            android:text="0/10"
+            android:textColor="@color/color_black"
+            android:textSize="16sp"
+            app:fontFamily="@font/sans_medium"
+
+
+            app:layout_constraintEnd_toEndOf="@+id/progrefourth"
+            app:layout_constraintTop_toTopOf="@+id/progrefourth"
+            app:layout_constraintBottom_toBottomOf="@+id/progrefourth" />
+
+
+          <!--        last step in progressbar..-->
+
+        <!--        fourth step cooking..  in android... -->
+        <com.skydoves.progressview.ProgressView
+            android:id="@+id/progressfifth"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progrefourth"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:progressView_colorBackground="#44D660"
+            app:progressView_colorProgress="#65E379"
+            app:progressView_labelColorOuter="#000"
+
+            app:progressView_highlightAlpha="0.8"
+            app:progressView_highlightWidth="100dp"
+
+            app:progressView_labelSize="150sp"
+            app:progressView_labelSpace="50dp"
+            app:layout_constraintCircleRadius="500dp"
+
+
+            app:progressView_orientation="horizontal"
+            app:progressView_progress="40"
+            app:progressView_radius="12dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:paddingLeft="8dp"
+
+            android:text="@string/save_money_the_crock_pot_way_06_jan_2019"
+
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            app:fontFamily="@font/sans_medium"
+            android:textColor="@color/color_black"
+            app:layout_constraintStart_toStartOf="@+id/progressfifth"
+            app:layout_constraintTop_toTopOf="@+id/progressfifth"
+            app:layout_constraintBottom_toBottomOf="@+id/progressfifth" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+
+            android:text="10/10"
+            android:textColor="@color/color_white"
+            android:textSize="16sp"
+            app:fontFamily="@font/sans_medium"
+
+
+            app:layout_constraintEnd_toEndOf="@+id/progressfifth"
+            app:layout_constraintTop_toTopOf="@+id/progressfifth"
+            app:layout_constraintBottom_toBottomOf="@+id/progressfifth" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

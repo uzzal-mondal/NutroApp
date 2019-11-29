@@ -8,7 +8,7 @@
     android:orientation="vertical">
 
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imageView_row_long_id"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
@@ -19,5 +19,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -33,38 +33,65 @@ dependencies {
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0-beta05'
 
-    // circle image view
+    //toolbar
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+
+    // circle image view .. ##
     implementation 'com.mikhaellopez:circularimageview:3.2.0'
 
-    //pin
+    //pin.. ##
     implementation('com.alimuzaffar.lib:pinentryedittext:2.0.6')
     // implementation 'com.github.GoodieBag:Pinview:1.3'
     implementation 'com.google.android.material:material:1.0.0'
 
-    // indicator
+    // indicator .. ##
     implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:4.1.2'
 
 
-    //circle image view
+    //circle image view .. ##
     implementation 'de.hdodenhof:circleimageview:3.0.1'
 
     //pin
     // implementation 'com.chaos.view:pinview:1.4.3'
 
-    //   status bar
+    //   status bar .. ##
     implementation 'com.jaeger.statusbarutil:library:1.4.0'
 
-    // assymateric recycler view
+    // assymateric recycler view .. ##
     implementation 'com.felipecsl.asymmetricgridview:library:2.0.1'
 
-    // circle image
+    // circle image .. ##
     implementation 'com.github.VaibhavLakhera:Circular-Progress-View:0.1.0'
 
     //
     implementation 'com.github.rachelxj:DropdownMenu:v1.0.0'
 
 
-    // spinner drop down ..
+    // spinner drop down .... ##
     implementation 'com.jaredrummler:material-spinner:1.3.1'
     implementation 'com.github.chivorns:smartmaterialspinner:1.1.6'
+
+    // horizental progressbar .. ##
+    implementation "com.github.skydoves:progressview:1.0.3"
+
+    // random color ..##
+    // implementation 'com.github.lzyzsd.randomcolor:library:1.0.0'
+
+
+    // fill progress .. ##
+    // implementation 'com.ramijemli.percentagechartview:percentagechartview:0.3.1'
+
+    //bubble chart in android.. ##
+    //blog
+    implementation 'com.github.Philjay:MPAndroidChart:v3.1.0'
+    implementation 'com.github.majorkik:SparkLineLayout:1.0.1'
+
+    //tutorial point
+    // implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0-alpha'
+
+    //implementation 'com.github.lecho:hellocharts-library:1.5.8@aar'
+
+
+    //vertical slider
+    implementation 'com.github.bosphere:android-verticalslider:1.0.3'
 }

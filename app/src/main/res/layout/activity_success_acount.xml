@@ -8,13 +8,13 @@
     android:layout_height="match_parent"
     android:background="#F9B2F0"
     android:orientation="vertical"
-    tools:context=".login.SuccessAcountActivity">
+    tools:context=".login_02.SuccessAcountActivity">
 
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imageback_arrow_id"
-        android:layout_width="20dp"
-        android:layout_height="34dp"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
         android:src="@drawable/back_arrow_page_white"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="350dp"
@@ -23,7 +23,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/image_bg_id"
         android:layout_width="400dp"
         android:layout_height="440dp"
@@ -40,11 +40,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/imagebgMain_id"
             android:layout_width="306dp"
             android:layout_height="380dp"
-            android:src="@drawable/signin_bg_image"
+            android:src="@drawable/icon_pui_1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +55,7 @@
 
 
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/text_account_id"
         android:layout_width="326dp"
         android:layout_height="43dp"
@@ -72,7 +72,7 @@
 
 
 
-    <EditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/editText_account_id"
         android:layout_width="330dp"
         android:layout_height="50dp"
@@ -91,32 +91,40 @@
         app:layout_constraintBottom_toTopOf="@+id/buttonContinue_id"/>
 
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonContinue_id"
-        android:layout_width="330dp"
-        android:layout_height="50dp"
-        android:textAlignment="center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp"
+        app:cornerRadius="12dp"
+        app:backgroundTint="@color/color_bg_button_onboarding"
+        android:gravity="center"
         android:textAllCaps="false"
-        android:background="@drawable/bg_rounded_button"
-        android:text="Continue"
-        android:textColor="#ffffff"
-        android:textSize="17sp"
+        android:text="@string/text_continue"
+        android:textColor="@color/white"
+        android:textSize="14sp"
         android:layout_marginTop="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/text_signin_id"
         app:layout_constraintTop_toBottomOf="@+id/editText_account_id" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/text_signin_id"
-        android:layout_width="77dp"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:padding="8dp"
+        android:gravity="center"
         android:layout_marginTop="30dp"
-        android:fontFamily="@font/sans_medium"
-        android:text="sign in"
-        android:textAlignment="center"
+        app:fontFamily="@font/sans_medium"
+        android:text="@string/sign_in"
         android:textAllCaps="false"
-        android:textSize="17sp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonContinue_id" />

@@ -1,138 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".onboarding.WelcomeNutro">
+    android:background="@color/color_white"
+    tools:layout_editor_absoluteY="100dp"
+    tools:context=".onboarding_01.WelcomeNutro">
 
 
-<!--
     <Button
-        android:id="@+id/buttonWelcomeNutro_id"
-        android:layout_width="336dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/bg_rounded_button"
-        android:fontFamily="@font/sans_medium"
-        android:text="Get Started"
-        android:textAlignment="center"
-        android:textColor="#ffffff"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcomeNutroRectangle_image_id"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:text="Button 2"
+        android:textColor="#fff"
+        android:background="@drawable/bg_circle_create_button"
+        app:layout_editor_absoluteX="100dp"
+        app:layout_editor_absoluteY="190dp"
+        app:layout_constraintCircleRadius="150dp"
+        app:layout_constraintCircleAngle="360"
 
-
-        />
-
-
-    <ImageView
-        android:id="@+id/welcomeNutroSquare_image_id"
-        android:layout_width="268.64dp"
-        android:layout_height="270dp"
-        android:layout_marginLeft="19.5dp"
-        android:layout_marginTop="125dp"
-        android:layout_marginBottom="40dp"
-        android:src="@drawable/welcome_nutro_square"
-        app:layout_constraintBottom_toTopOf="@+id/buttonWelcomeNutro_id"
-        app:layout_constraintLeft_toRightOf="@+id/welcomeNutroRectangle_image_id"
-        app:layout_constraintTop_toBottomOf="@id/textWelcomeNutoSub_id"
-
-        />
-
-
-    <ImageView
-        android:layout_width="148dp"
-        android:layout_height="121dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginBottom="69dp"
-        android:src="@drawable/exploreimage"
-        app:layout_constraintBottom_toBottomOf="@+id/welcomeNutroSquare_image_id"
-        app:layout_constraintStart_toStartOf="@+id/welcomeNutroSquare_image_id"
-        app:layout_constraintTop_toTopOf="@+id/welcomeNutroSquare_image_id"
-        app:layout_constraintVertical_bias="0.5" />
-
-    <ImageView
-        android:id="@+id/welcomeNutroRectangle_image_id"
-        android:layout_width="197.5dp"
-        android:layout_height="344dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="8dp"
-        android:src="@drawable/welcomenutro_rectangle"
-        app:layout_constraintBottom_toTopOf="@+id/buttonWelcomeNutro_id"
-        app:layout_constraintRight_toLeftOf="@+id/welcomeNutroSquare_image_id"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textWelcomeNutoSub_id" />
-
-
-    <ImageView
-        android:id="@+id/imageWelcomeNutro_id"
-        android:layout_width="196dp"
-        android:layout_height="196dp"
-        android:src="@drawable/makeimage"
-        app:layout_constraintTop_toTopOf="@+id/welcomeNutroRectangle_image_id"
-        app:layout_constraintBottom_toBottomOf="@+id/welcomeNutroRectangle_image_id"
-        app:layout_constraintStart_toStartOf="@+id/welcomeNutroRectangle_image_id"
-        app:layout_constraintEnd_toEndOf="@+id/welcomeNutroRectangle_image_id"
-
-        />
-
-
-
-
-
-    <TextView
-        android:id="@+id/textWelcomeNutoSub_id"
-        android:layout_width="291dp"
-        android:layout_height="66dp"
-
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="46dp"
-        android:fontFamily="@font/lucida_grande"
-
-        android:text="@string/on_boarding_text"
-
-        android:textAlignment="center"
-        android:textColor="#9EA9B1"
-        android:textSize="16sp"
-
-        app:layout_constraintBottom_toTopOf="@id/welcomeNutroRectangle_image_id"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textWelcomeNuto_id" />
-
-
-    <TextView
-        android:id="@+id/textWelcomeNuto_id"
-        android:layout_width="288dp"
-        android:layout_height="38dp"
-
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:fontFamily="@font/sans_medium"
-
-        android:text="Welcome to Nutro"
-
-
-        android:textAlignment="center"
-        android:textColor="#343434"
-        android:textSize="31sp"
-
-
-        app:layout_constraintBottom_toTopOf="@id/textWelcomeNutoSub_id"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
 
-        />-->
+
+
+        />
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

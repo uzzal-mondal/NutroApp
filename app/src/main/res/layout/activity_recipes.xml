@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    tools:context=".recipes_activity_05.RecipesActivity">
+
+
+    <include
+        android:id="@+id/includelayout_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        layout="@layout/custom_recipes_toolbar"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/recipes_text_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+
+        android:layout_marginTop="72dp"
+
+        android:text="Recipes"
+        android:textSize="32sp"
+        app:fontFamily="@font/sans_medium"
+        android:textColor="#343434"
+
+        app:layout_constraintBottom_toTopOf="@+id/constraint_header_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.appcompat.widget.AppCompatTextView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_header_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center"
+
+        app:layout_constraintBottom_toTopOf="@+id/recycler_recipes_id"
+        app:layout_constraintTop_toBottomOf="@+id/recipes_text_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_all_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+
+
+
+            app:layout_constraintHorizontal_weight="1"
+
+
+            android:text="All"
+            android:textAllCaps="false"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:backgroundTint="@color/color_bg_button"
+            app:cornerRadius="8dp"
+            android:textColor="@color/text_recipe_color"
+
+            app:layout_constraintRight_toLeftOf="@+id/btn_sweet_id"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_sweet_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_marginLeft="8dp"
+
+            app:layout_constraintHorizontal_weight="1"
+
+            android:text="Sweets"
+            android:textAllCaps="false"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:backgroundTint="@color/color_bg_button"
+            app:cornerRadius="8dp"
+            android:textColor="@color/text_recipe_color"
+
+            app:layout_constraintLeft_toRightOf="@+id/btn_all_id"
+            app:layout_constraintRight_toLeftOf="@+id/btn_fruit_id"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_fruit_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+
+            app:layout_constraintHorizontal_weight="1"
+
+            android:text="Fruits"
+            android:textAllCaps="false"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:backgroundTint="@color/color_bg_fruit"
+            app:cornerRadius="8dp"
+            android:textColor="@color/white"
+
+            app:layout_constraintLeft_toRightOf="@+id/btn_sweet_id"
+            app:layout_constraintRight_toLeftOf="@+id/btn_veg_id"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_veg_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+
+
+
+            app:layout_constraintHorizontal_weight="1"
+
+
+            android:text="Veg"
+            android:textAllCaps="false"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:backgroundTint="@color/color_bg_button"
+            android:textColor="@color/text_recipe_color"
+            app:cornerRadius="8dp"
+
+            app:layout_constraintLeft_toRightOf="@+id/btn_fruit_id"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_recipes_id"
+        android:layout_width="368dp"
+        android:layout_height="461dp"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraint_header_id">
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

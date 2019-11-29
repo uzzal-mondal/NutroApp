@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    tools:context=".schedulenutrition_activity_04.ScheduleNutrationActivity">
+
+    <include
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        layout="@layout/custom_toolbar_schedule"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+
+    <com.vaibhavlakhera.circularprogressview.CircularProgressView
+        android:id="@+id/progressViewNutration_id"
+        android:layout_width="164dp"
+        android:layout_height="164dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+
+        app:animate="true"
+        app:animateDuration="600"
+        app:fillColor="@color/color_white"
+        app:progress="300"
+        android:padding="30dp"
+        app:progressColor="@color/color_progress"
+        app:progressRoundCap="true"
+        app:progressTextColor="@color/color_black"
+        app:progressTextEnabled="true"
+        app:progressTextSize="32sp"
+        app:progressTextType="progress"
+        app:progressWidth="20dp"
+        app:startAngle="270"
+        app:total="900"
+        app:totalColor="@color/color_total_progress"
+        app:totalWidth="20dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/cardviewScedule_id" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="of 900 kcal"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="@+id/progressViewNutration_id"
+        app:layout_constraintTop_toTopOf="@+id/progressViewNutration_id"
+        app:layout_constraintEnd_toEndOf="@+id/progressViewNutration_id"
+        app:layout_constraintBottom_toBottomOf="@+id/progressViewNutration_id"/>
+
+<!--    card view design part: 2 -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardviewScedule_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="32dp"
+        app:cardCornerRadius="25dp"
+        android:padding="20dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/constraintOverallNutritionScore_id"
+        app:layout_constraintTop_toBottomOf="@+id/progressViewNutration_id">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textSchudle_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginBottom="32dp"
+
+                android:text="Schedule"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:textColor="@color/color_black"
+                app:fontFamily="@font/sans_medium"
+                android:gravity="start"
+
+                app:layout_constraintRight_toLeftOf="@+id/buttonCalendar_id"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonCalendar_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp"
+
+                android:backgroundTint="@color/color_calendar"
+                android:text="Open Calendar"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                app:fontFamily="@font/sans_medium"
+                android:padding="5dp"
+                android:textColor="@color/color_calendar_text"
+
+                app:layout_constraintLeft_toRightOf="@+id/textSchudle_id"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+<!--    this is for overall nutrition score-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintOverallNutritionScore_id"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+       android:layout_marginBottom="32dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/constraintHorizental_id"
+        app:layout_constraintTop_toBottomOf="@+id/cardviewScedule_id">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textOverallNutro_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginEnd="16dp"
+            android:gravity="start"
+
+            android:text="Overall Nutrition Score"
+            android:textSize="19sp"
+            android:textColor="@color/color_black"
+            android:fontFamily="@font/sans_medium"
+            android:textAllCaps="false"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/recycler_nutrition_id"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_nutrition_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textOverallNutro_id">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--    this is part of butter milk orange -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintHorizental_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/constraintOverallNutritionScore_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_butter_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:text="Butter"
+            app:fontFamily="@font/sans_medium"
+            android:textAllCaps="false"
+            android:gravity="start"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            app:layout_constraintRight_toLeftOf="@+id/textButterGram_id"
+            app:layout_constraintBottom_toTopOf="@+id/progressView1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textButterGram_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/butter_ten_gram"
+            android:textSize="16sp"
+            android:fontFamily="@font/sans_regular"
+            android:textAllCaps="false"
+            android:textAlignment="textEnd"
+
+            android:layout_marginEnd="8dp"
+            app:layout_constraintLeft_toRightOf="@+id/text_butter_id"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <com.skydoves.progressview.ProgressView
+            android:id="@+id/progressView1"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+
+            app:progressView_colorBackground="@color/color_white"
+            app:progressView_colorProgress="#FF9DC0"
+            app:progressView_labelColorOuter="#000"
+
+            app:progressView_progress="30"
+            app:progressView_max="100"
+            app:progressView_autoAnimate="true"
+            app:progressView_radius="8dp"
+            app:progressView_padding="1dp"
+
+            app:progressView_labelSize="13sp"
+            app:progressView_labelSpace="10dp"
+            app:progressView_labelTypeface="bold"
+
+            android:layout_marginEnd="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/text_milk_id"
+            app:layout_constraintTop_toBottomOf="@+id/text_butter_id"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_milk_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Milk"
+            app:fontFamily="@font/sans_medium"
+            android:textAllCaps="false"
+            android:textAlignment="textStart"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="15dp"
+
+            app:layout_constraintRight_toLeftOf="@+id/textMilkGram_id"
+            app:layout_constraintBottom_toTopOf="@+id/progressView2"
+            app:layout_constraintTop_toBottomOf="@+id/progressView1"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textMilkGram_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/milk_forty_gram"
+            android:textSize="16sp"
+            android:fontFamily="@font/sans_regular"
+            android:textAllCaps="false"
+            android:textAlignment="textEnd"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textButterGram_id"
+            app:layout_constraintLeft_toRightOf="@+id/text_milk_id"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+        <com.skydoves.progressview.ProgressView
+            android:id="@+id/progressView2"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            app:progressView_colorBackground="@color/color_white"
+            app:progressView_colorProgress="#FFDC49"
+            app:progressView_progress="60"
+            app:progressView_max="100"
+            app:progressView_autoAnimate="true"
+            app:progressView_radius="8dp"
+            app:progressView_padding="1dp"
+            app:progressView_labelColorOuter="#000"
+            app:progressView_labelSize="13sp"
+            app:progressView_labelSpace="10dp"
+            app:progressView_labelTypeface="bold"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/text_milk_id"
+            app:layout_constraintBottom_toTopOf="@+id/text_orange_id"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_orange_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Orange"
+            app:fontFamily="@font/sans_medium"
+            android:textAllCaps="false"
+            android:gravity="start"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="15dp"
+            app:layout_constraintRight_toLeftOf="@+id/textOrangeGram_id"
+            app:layout_constraintBottom_toTopOf="@+id/progressView3"
+            app:layout_constraintTop_toBottomOf="@+id/progressView2"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+        <com.skydoves.progressview.ProgressView
+            android:id="@+id/progressView3"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            app:progressView_colorBackground="@color/color_white"
+            app:progressView_colorProgress="#5DD9DE"
+            app:progressView_progress="90"
+            app:progressView_max="100"
+            app:progressView_autoAnimate="true"
+            app:progressView_radius="8dp"
+            app:progressView_padding="1dp"
+            app:progressView_labelColorOuter="#000"
+            app:progressView_labelSize="13sp"
+            app:progressView_labelSpace="10dp"
+            app:progressView_labelTypeface="bold"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/text_orange_id"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textOrangeGram_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/orange_hundred_gram"
+            android:textSize="16sp"
+            android:fontFamily="@font/sans_regular"
+            android:textAllCaps="false"
+            android:textAlignment="textEnd"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintLeft_toRightOf="@+id/text_orange_id"
+            app:layout_constraintTop_toBottomOf="@+id/textMilkGram_id"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

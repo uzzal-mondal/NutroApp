@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/constraint_layout_id"
+    android:background="@color/color_white"
     tools:context=".MainActivity">
 
 
@@ -14,7 +15,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/indicator_id"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,30 +23,47 @@
     <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
         android:id="@+id/indicator_id"
         android:layout_width="wrap_content"
-        android:layout_height="15dp"
-        android:layout_marginBottom="100dp"
-        android:layout_marginStart="165dp"
-        android:layout_marginEnd="165dp"
-        app:dotsColor="@color/color_white"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:dotsColor="@color/color_dots"
         app:dotsCornerRadius="8dp"
-        app:dotsSize="12dp"
+        app:dotsSize="10dp"
         app:dotsStrokeWidth="2dp"
         app:dotsSpacing="4dp"
         app:progressMode="true"
-        app:selectedDotColor="@color/color_dot"
+        app:selectedDotColor="@color/color_selected_dot"
         app:stiffness="300"
         app:dotsStrokeColor="@color/color_black"
-        app:dampingRatio="0.5"
-        app:dotsWidthFactor="1.5"
-        app:layout_constraintBottom_toBottomOf="@+id/viewPager_id"
+        app:dampingRatio="1"
+        app:dotsWidthFactor="1"
+        app:layout_constraintTop_toBottomOf="@+id/viewPager_id"
+        app:layout_constraintBottom_toTopOf="@+id/button_get_started"
         app:layout_constraintEnd_toEndOf="@id/viewPager_id"
         app:layout_constraintStart_toStartOf="@id/viewPager_id" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_get_started"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
 
+        app:fontFamily="@font/sans_medium"
+        app:backgroundTint="@color/color_bg_button_onboarding"
+        android:padding="16dp"
+        app:cornerRadius="12dp"
+        android:text="@string/get_started"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:textColor="@color/color_white"
+        android:textSize="14sp"
 
-
-
-
+        app:layout_constraintTop_toBottomOf="@+id/indicator_id"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
 
 

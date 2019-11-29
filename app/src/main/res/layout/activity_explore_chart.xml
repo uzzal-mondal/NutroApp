@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFB4FF"
+    tools:context=".exploresecondactivity_activity_02.ExploreChartActivity">
+
+    <include
+        android:id="@+id/custom_toolbar_uzzal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        layout="@layout/custom_toolbar_option"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/plumsimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_plums"
+        app:layout_constraintBottom_toTopOf="@+id/cardid"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardid"
+        android:layout_width="0dp"
+        android:layout_height="490dp"
+        app:cardCornerRadius="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/plumsimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintcalendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycclermonth_id"
+                android:layout_width="0dp"
+                android:layout_height="65dp"
+
+                app:layout_constraintBottom_toTopOf="@+id/recyclerday_id"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerday_id"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                app:layout_constraintBottom_toTopOf="@+id/scheduletext"
+                app:layout_constraintTop_toBottomOf="@+id/recycclermonth_id"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/scheduletext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+
+                android:text="Schedule"
+                android:textColor="@color/color_black"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/recyclerstokes_id"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerday_id"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerstokes_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+
+                app:layout_constraintTop_toBottomOf="@+id/scheduletext"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageexploreplum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:src="@drawable/icon_plums_120"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/recyclerstokes_id"
+                app:layout_constraintEnd_toEndOf="@+id/recyclerstokes_id"
+                app:layout_constraintTop_toTopOf="@+id/recyclerstokes_id" />
+
+
+            <!--<androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageexploreplum2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+
+                android:src="@drawable/icon_plums_120"
+                app:layout_constraintStart_toStartOf="@+id/recyclerstokes_id"
+                app:layout_constraintEnd_toEndOf="@+id/recyclerstokes_id"
+               app:layout_constraintTop_toBottomOf="@+id/recyclerstokes_id" />-->
+
+
+
+
+
+
+
+
+
+
+
+
+          <!--   <androidx.appcompat.widget.AppCompatTextView
+                 android:id="@+id/nine"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_marginStart="16dp"
+                 android:layout_marginEnd="16dp"
+
+                 android:textSize="16sp"
+                 android:textAllCaps="false"
+                 android:text="9.00"
+                 app:fontFamily="@font/sans_medium"
+                 android:textColor="@color/black"
+
+                 app:layout_constraintTop_toBottomOf="@+id/scheduletext"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imagestroke1"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_stroke_line"
+
+                app:layout_constraintTop_toBottomOf="@+id/nine"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>-->
+
+
+
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

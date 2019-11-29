@@ -1,114 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".signup.NutroSignUpActivity">
+    android:background="@color/color_white"
+    tools:context=".signup_01.NutroSignUpActivity">
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textNutroMain_id"
-        android:layout_width="95dp"
-        android:layout_height="38dp"
-        android:textColor="@color/color_black"
-        android:textAllCaps="false"
-        android:text="@string/text_nutro"
-        android:textSize="32sp"
-        android:fontFamily="@font/sans_medium"
-        android:layout_marginStart="41dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="100dp"
+
+        android:layout_marginEnd="96dp"
+        android:text="@string/text_nutro"
+        android:textAllCaps="false"
+        android:textColor="@color/color_black"
+        android:textSize="32sp"
+        app:fontFamily="@font/sans_medium"
+
         app:layout_constraintBottom_toTopOf="@+id/textNutroSub_id"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textNutroSub_id"
-        android:layout_width="236dp"
-        android:layout_height="76dp"
-        android:textSize="13sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="72dp"
         android:fontFamily="@font/sans_regular"
+        android:gravity="start"
         android:text="@string/on_boarding_text"
         android:textAllCaps="false"
-        android:textAlignment="textStart"
-        android:layout_marginTop="40dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="100dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/cardView_id"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/buttonSignUp_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/view_white_id"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textNutroMain_id" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonSignUp_id"
-        android:layout_width="197dp"
-        android:layout_height="60dp"
-        android:text="@string/sign_up"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        android:textAllCaps="false"
-        android:textColor="#ffffff"
-        android:fontFamily="@font/sans_medium"
-        android:background="@drawable/bg_rounded_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="280dp"
-        android:layout_marginStart="31dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textNutroSub_id"
-        app:layout_constraintBottom_toTopOf="@+id/textAccount_id" />
-
-    <TextView
-        android:id="@+id/textAccount_id"
-        android:layout_width="164dp"
-        android:layout_height="39dp"
-        android:textColor="#9EA9B1"
+        android:layout_marginEnd="180dp"
+        android:fontFamily="@font/sans_medium"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/sign_up"
         android:textAllCaps="false"
-        android:textSize="15sp"
-        android:fontFamily="@font/sans_regular"
-        android:textAlignment="textStart"
+        android:textColor="@color/color_white"
+        android:textSize="16sp"
+        app:backgroundTint="@color/color_bg_button_onboarding"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/textAccount_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNutroSub_id" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textAccount_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="90dp"
+
+        android:gravity="start"
         android:text="@string/already_have_an_naccount"
-        android:layout_marginTop="60dp"
-        android:layout_marginStart="31dp"
-        android:layout_marginBottom="60dp"
+        android:textAllCaps="false"
+        android:textColor="@color/color_account_textview"
+        android:textSize="14sp"
+        app:fontFamily="@font/sans_regular"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonSignUp_id" />
 
 
-
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView_id"
-        android:layout_width="100dp"
-        android:layout_height="687dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="40dp"
-        android:background="@drawable/bg_signup_white_rounded_corner"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="8dp"
+    <View
+        android:id="@+id/viewSignUper_yellow_id"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/bg_signup_yellow_rounded_corner"
+        android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constrant_signUp_id"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    <View
+        android:id="@+id/view_white_id"
+        android:layout_width="75dp"
+        android:layout_height="550dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="70dp"
+        android:background="@drawable/bg_signup_white_rounded_corner"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/textNutroSub_id"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <View
-                android:id="@+id/viewSignUp_yellow_id"
-                android:layout_width="60dp"
-                android:layout_height="0dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="30dp"
-                android:background="@drawable/bg_signup_yellow_rounded_corner"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

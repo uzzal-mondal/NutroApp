@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    tools:context=".statsoverview_stats_04.StatsOverviewActivity">
+
+    <include
+        android:id="@+id/includelayout_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        layout="@layout/custom_toolbar_explore"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/overviewtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+
+
+        android:text="Overview"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        android:layout_marginTop="64dp"
+        app:fontFamily="@font/sans_medium"
+        android:gravity="start"
+
+        app:layout_constraintRight_toLeftOf="@+id/circleprofile"
+        app:layout_constraintBottom_toTopOf="@+id/caloriestext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/caloriestext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        app:fontFamily="@font/sans_medium"
+        android:text="120 calories burned"
+
+        app:layout_constraintRight_toLeftOf="@+id/circleprofile"
+        app:layout_constraintBottom_toTopOf="@+id/lastdays"
+        app:layout_constraintTop_toBottomOf="@+id/overviewtext"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lastdays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+
+        android:textSize="14sp"
+        app:fontFamily="@font/sans_medium"
+        android:text="Last 28 Days"
+
+        app:layout_constraintBottom_toTopOf="@+id/constrantnutionallbutton"
+        app:layout_constraintRight_toLeftOf="@+id/circleprofile"
+        app:layout_constraintTop_toBottomOf="@+id/caloriestext"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleprofile"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/circle_image_eva_olson"
+        android:layout_marginTop="72dp"
+
+
+        app:layout_constraintLeft_toRightOf="@+id/overviewtext"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrantnutionallbutton"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintHorizontal_weight="3"
+
+        app:layout_constraintBottom_toTopOf="@+id/constraintmonth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastdays">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/nutrition"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_marginRight="16dp"
+
+            app:layout_constraintHorizontal_weight="1"
+            android:text="Nutrition"
+            android:textColor="#FF9DC0"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:gravity="center"
+            app:cornerRadius="16dp"
+            android:backgroundTint="@color/color_calendar"
+            android:fontFamily="@font/sans_medium"
+
+            app:layout_constraintRight_toLeftOf="@+id/listners"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/listners"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:padding="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+
+            android:text="Listners"
+            android:textColor="#9EA9B1"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:gravity="center"
+            app:cornerRadius="16dp"
+            android:backgroundTint="#fff"
+            android:fontFamily="@font/sans_medium"
+            app:layout_constraintHorizontal_weight="1"
+
+            app:layout_constraintRight_toLeftOf="@+id/followers"
+            app:layout_constraintLeft_toRightOf="@+id/nutrition"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/followers"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:padding="8dp"
+            android:layout_marginLeft="16dp"
+
+            android:text="Followers"
+            android:textColor="#9EA9B1"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:gravity="center"
+            app:cornerRadius="16dp"
+            android:backgroundTint="#fff"
+            android:fontFamily="@font/sans_medium"
+            app:layout_constraintHorizontal_weight="1"
+
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/listners"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--    second step design... -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintmonth"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_weekly_overview"
+        app:layout_constraintTop_toBottomOf="@+id/constrantnutionallbutton"
+        app:layout_constraintBottom_toTopOf="@+id/activitytext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleroverview_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraint_header_id">
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+   <androidx.appcompat.widget.AppCompatTextView
+       android:id="@+id/activitytext"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="24dp"
+       android:layout_marginTop="8dp"
+
+
+       android:text="Activity"
+       android:textColor="@color/color_black"
+       android:textAllCaps="false"
+       android:textSize="16sp"
+       app:fontFamily="@font/sans_medium"
+
+       app:layout_constraintBottom_toTopOf="@+id/constraintactivityprogress"
+       app:layout_constraintTop_toBottomOf="@+id/constraintmonth"
+       app:layout_constraintStart_toStartOf="parent" />
+
+
+<!--    progress nutrition-->
+
+    <!--    this is part of butter milk orange -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintactivityprogress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="26dp"
+        app:layout_constraintTop_toBottomOf="@+id/activitytext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_post_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+
+            android:text="Post Total"
+            app:fontFamily="@font/sans_medium"
+            android:textAllCaps="false"
+            android:gravity="start"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            app:layout_constraintRight_toLeftOf="@+id/textpost"
+            app:layout_constraintBottom_toTopOf="@+id/progressView1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textpost"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="30%"
+            android:textSize="16sp"
+            android:fontFamily="@font/sans_regular"
+            android:textAllCaps="false"
+            android:textAlignment="textEnd"
+
+            android:layout_marginEnd="8dp"
+            app:layout_constraintLeft_toRightOf="@+id/text_post_id"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <com.skydoves.progressview.ProgressView
+            android:id="@+id/progressView1"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+
+            app:progressView_colorBackground="@color/color_white"
+            app:progressView_colorProgress="#FF9DC0"
+            app:progressView_labelColorOuter="#000"
+
+            app:progressView_progress="30"
+            app:progressView_max="100"
+            app:progressView_autoAnimate="true"
+            app:progressView_radius="8dp"
+            app:progressView_padding="1dp"
+
+            app:progressView_labelSize="13sp"
+            app:progressView_labelSpace="10dp"
+            app:progressView_labelTypeface="bold"
+
+            android:layout_marginEnd="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/text_delivery_id"
+            app:layout_constraintTop_toBottomOf="@+id/textpost"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_delivery_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Delivery"
+            app:fontFamily="@font/sans_medium"
+            android:textAllCaps="false"
+            android:textAlignment="textStart"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="15dp"
+
+            app:layout_constraintRight_toLeftOf="@+id/textdelivaryid"
+            app:layout_constraintBottom_toTopOf="@+id/progressView2"
+            app:layout_constraintTop_toBottomOf="@+id/progressView1"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textdelivaryid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="10%"
+            android:textSize="16sp"
+            android:fontFamily="@font/sans_regular"
+            android:textAllCaps="false"
+            android:textAlignment="textEnd"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textpost"
+            app:layout_constraintLeft_toRightOf="@+id/text_delivery_id"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+        <com.skydoves.progressview.ProgressView
+            android:id="@+id/progressView2"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            app:progressView_colorBackground="@color/color_white"
+            app:progressView_colorProgress="#FFDC49"
+            app:progressView_progress="60"
+            app:progressView_max="100"
+            app:progressView_autoAnimate="true"
+            app:progressView_radius="8dp"
+            app:progressView_padding="1dp"
+            app:progressView_labelColorOuter="#000"
+            app:progressView_labelSize="13sp"
+            app:progressView_labelSpace="10dp"
+            app:progressView_labelTypeface="bold"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/text_delivery_id"
+            app:layout_constraintBottom_toTopOf="@+id/text_spend_id"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_spend_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Spend"
+            app:fontFamily="@font/sans_medium"
+            android:textAllCaps="false"
+            android:gravity="start"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="15dp"
+            app:layout_constraintRight_toLeftOf="@+id/textspendid"
+            app:layout_constraintBottom_toTopOf="@+id/progressView3"
+            app:layout_constraintTop_toBottomOf="@+id/progressView2"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+        <com.skydoves.progressview.ProgressView
+            android:id="@+id/progressView3"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            app:progressView_colorBackground="@color/color_white"
+            app:progressView_colorProgress="#5DD9DE"
+            app:progressView_progress="90"
+            app:progressView_max="100"
+            app:progressView_autoAnimate="true"
+            app:progressView_radius="8dp"
+            app:progressView_padding="1dp"
+            app:progressView_labelColorOuter="#000"
+            app:progressView_labelSize="13sp"
+            app:progressView_labelSpace="10dp"
+            app:progressView_labelTypeface="bold"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/text_spend_id"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textspendid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="90%"
+            android:textSize="16sp"
+            android:fontFamily="@font/sans_regular"
+            android:textAllCaps="false"
+            android:textAlignment="textEnd"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintLeft_toRightOf="@+id/text_spend_id"
+            app:layout_constraintTop_toBottomOf="@+id/textdelivaryid"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
