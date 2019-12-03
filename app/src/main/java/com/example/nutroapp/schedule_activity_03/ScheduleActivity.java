@@ -28,12 +28,13 @@ import android.widget.Spinner;
 import com.chivorn.smartmaterialspinner.SmartMaterialSpinner;
 import com.example.nutroapp.R;
 import com.example.nutroapp.evaolson_social_02.EvaOlsonActivity;
-import com.example.nutroapp.freshforse_social_06convartingfragment.FreshForseActivity;
+
 import com.example.nutroapp.planning_stats_06.PlanningActivity;
 import com.example.nutroapp.profileeva_social_04.ProfileEvaActivity;
 import com.example.nutroapp.profilelula_social_03.ProfileLulaActivity;
 import com.example.nutroapp.schedulenutrition_activity_04.ScheduleNutrationActivity;
-import com.example.nutroapp.todayspecial_social_01.TodayActivity;
+
+import com.example.nutroapp.statasactivity_stats_01.StatasActivity;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
@@ -121,13 +122,14 @@ public class ScheduleActivity extends AppCompatActivity implements View.OnClickL
 
                     case R.id.nutrition_nav_id:
                         startActivity(new Intent(ScheduleActivity.this,
-                                TodayActivity.class));
+                                EvaOlsonActivity.class));
                         break;
 
                     case R.id.activity_nav_id:
                         startActivity(new Intent(ScheduleActivity.this,
-                                EvaOlsonActivity.class));
+                                ProfileLulaActivity.class));
                         break;
+
 
                     case R.id.calendar_nav_id:
                         startActivity(new Intent(ScheduleActivity.this,
@@ -136,12 +138,12 @@ public class ScheduleActivity extends AppCompatActivity implements View.OnClickL
 
                     case R.id.account_nav_id:
                         startActivity(new Intent(ScheduleActivity.this,
-                                ProfileLulaActivity.class));
+                                ScheduleNutrationActivity.class));
                         break;
 
                     case R.id.setting_nav_id:
-                       startActivity(new Intent(ScheduleActivity.this,
-                               ProfileEvaActivity.class));
+                        startActivity(new Intent(ScheduleActivity.this,
+                                StatasActivity.class));
                         break;
 
                     default:
@@ -161,7 +163,7 @@ public class ScheduleActivity extends AppCompatActivity implements View.OnClickL
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(ScheduleActivity.this,
-                        ScheduleNutrationActivity.class));
+                        EvaOlsonActivity.class));
             }
         });
 
@@ -309,8 +311,8 @@ public class ScheduleActivity extends AppCompatActivity implements View.OnClickL
 
         if (view.getId() == R.id.serchschedulemenu_id){
 
-           startActivity(new Intent(ScheduleActivity.this,
-                   FreshForseActivity.class));
+          /* startActivity(new Intent(ScheduleActivity.this,
+                   FreshForseActivity.class));*/
         }
 
     }

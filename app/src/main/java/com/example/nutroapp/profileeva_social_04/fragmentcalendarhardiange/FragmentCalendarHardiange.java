@@ -67,12 +67,12 @@ public class FragmentCalendarHardiange extends Fragment {
 
         //menu find id ..##
         backImage = view.findViewById(R.id.imagebackcreate_id);
-        backImage.setOnClickListener(new View.OnClickListener() {
+       /* backImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                // onBackPressed();
             }
-        });
+        });*/
 
         // go to another acitivity... ##
         textView.setOnClickListener(new View.OnClickListener() {

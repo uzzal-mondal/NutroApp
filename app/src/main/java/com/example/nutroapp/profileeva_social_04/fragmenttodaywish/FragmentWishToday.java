@@ -21,8 +21,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.nutroapp.R;
-import com.example.nutroapp.evaolson_social_02.EvaOlsonActivity;
-import com.example.nutroapp.todayspecial_social_01.TodayActivity;
+
 
 import java.util.List;
 
@@ -60,12 +59,12 @@ public class FragmentWishToday extends Fragment {
         todayText =view.findViewById(R.id.todaytext);
         imageback = view.findViewById(R.id.backmenu_id);
 
-        imageback.setOnClickListener(new View.OnClickListener() {
+       /* imageback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
               //  onBackPressed();
             }
-        });
+        });*/
 
         // go to another activity...##
         todayText.setOnClickListener(new View.OnClickListener() {
@@ -80,19 +79,25 @@ public class FragmentWishToday extends Fragment {
                 TodayWishModel.getTodayModelList());
 
         // important grid layout... ##
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(context,2);
+
+
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(context,2,
+                RecyclerView.HORIZONTAL,false);
         gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
             @Override
             public int getSpanSize(int position) {
                 return position == 0 ? 2 : 1;
             }
         });
+        recyclerView.setLayoutManager(gridLayoutManager);
+        recyclerView.setAdapter(adapter);
+
+
 
 
 
 
            /*.........second recycler adapter.....###................*/
-
 
         //second recycler adapter ..##
         recyclerViewPlace = view.findViewById(R.id.recyclerplaceid);

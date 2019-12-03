@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 import com.example.nutroapp.R;
 import com.example.nutroapp.statistic_stats_03.StatisticActivity;
-import com.example.nutroapp.todayspecial_social_01.TodayActivity;
+
 import com.majorik.sparklinelibrary.SparkLineLayout;
 
 import java.util.ArrayList;

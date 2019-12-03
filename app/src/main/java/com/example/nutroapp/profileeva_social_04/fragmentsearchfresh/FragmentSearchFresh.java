@@ -19,8 +19,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.nutroapp.R;
-import com.example.nutroapp.freshforse_social_06convartingfragment.FreshModel;
-import com.example.nutroapp.freshforse_social_06convartingfragment.FreshRecyclerAdapter;
+
 import com.example.nutroapp.helper.OverlapDecoration;
 
 import java.util.ArrayList;
@@ -30,7 +29,7 @@ public class FragmentSearchFresh extends Fragment {
 
     ImageView imageView;
     RecyclerView recyclerfresh;
-    List<FreshModel> freshModelList;
+    List<FreshSearchModel> freshModelList;
     AppCompatImageView backImage;
 
 
@@ -56,7 +55,7 @@ public class FragmentSearchFresh extends Fragment {
         recyclerfresh = view.findViewById(R.id.recyclerfresh_id);
         backImage = view.findViewById(R.id.imagebackcreate_id);
 
-        backImage.setOnClickListener(new View.OnClickListener() {
+        /*backImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                // onBackPressed();
@@ -67,18 +66,18 @@ public class FragmentSearchFresh extends Fragment {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               /* startActivity(new Intent(FreshForseActivity.this,
-                        StatasActivity.class));*/
+               *//* startActivity(new Intent(FreshForseActivity.this,
+                        StatasActivity.class));*//*
             }
-        });
+        });*/
 
 
 
-        List<FreshModel> modelList = new ArrayList<>();
-        modelList.add(new FreshModel(R.drawable.profile_eva_olson_1));
-        modelList.add(new FreshModel(R.drawable.profile_eva_olson_2));
-        modelList.add(new FreshModel(R.drawable.profile_eva_ollson_3));
-        FreshRecyclerAdapter adapter = new FreshRecyclerAdapter(getContext());
+        List<FreshSearchModel> modelList = new ArrayList<>();
+        modelList.add(new FreshSearchModel(R.drawable.profile_eva_olson_1));
+        modelList.add(new FreshSearchModel(R.drawable.profile_eva_olson_2));
+        modelList.add(new FreshSearchModel(R.drawable.profile_eva_ollson_3));
+        FreshSearchRecyclerAdapter adapter = new FreshSearchRecyclerAdapter(getContext());
         recyclerfresh.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerfresh.setAdapter(adapter);
         recyclerfresh.addItemDecoration(new OverlapDecoration());

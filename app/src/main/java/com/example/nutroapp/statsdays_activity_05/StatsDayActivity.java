@@ -65,8 +65,8 @@ public class StatsDayActivity extends AppCompatActivity {
         textSeven.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(StatsDayActivity.this,
-                        PlanningActivity.class));
+               /* startActivity(new Intent(StatsDayActivity.this,
+                        PlanningActivity.class));*/
             }
         });
 

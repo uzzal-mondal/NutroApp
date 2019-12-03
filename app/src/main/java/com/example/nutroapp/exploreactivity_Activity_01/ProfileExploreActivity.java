@@ -3,6 +3,7 @@ package com.example.nutroapp.exploreactivity_Activity_01;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
@@ -22,7 +23,6 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 import com.example.nutroapp.R;
-import com.example.nutroapp.dietaryhardinge_social_05_convertfragment.DietaryHardingeActivity;
 import com.example.nutroapp.exploresecondactivity_activity_02.ExploreChartActivity;
 import com.example.nutroapp.profileeva_social_04.ProfileEvaActivity;
 import com.example.nutroapp.recipes_activity_05.RecipesActivity;
@@ -43,8 +43,9 @@ public class ProfileExploreActivity extends AppCompatActivity implements View.On
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle toggle;
     private NavigationView navigationView;
-    private  AppCompatImageView menuImageView;
-    private  AppCompatImageView searchmenu;
+    private AppCompatImageView menuImageView;
+    private AppCompatImageView searchmenu;
+    private AppCompatButton buttoncontinue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +72,7 @@ public class ProfileExploreActivity extends AppCompatActivity implements View.On
         recyclerView = findViewById(R.id.recycler_explore_second_id);
         recyclerCountView = findViewById(R.id.recycler_explore_fast_count_id);
         buttonViewExplore = findViewById(R.id.button_explore_id);
+
         buttonViewExplore.setOnClickListener(this);
 
         // find id nav
@@ -80,7 +82,7 @@ public class ProfileExploreActivity extends AppCompatActivity implements View.On
         drawerLayout = findViewById(R.id.actvity_drawer_id);
 
         //menu create... ##
-        toggle = new ActionBarDrawerToggle(this,drawerLayout,R.string.open,
+        toggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.open,
                 R.string.close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
@@ -101,9 +103,6 @@ public class ProfileExploreActivity extends AppCompatActivity implements View.On
         });
 
 
-
-
-
         // navigation view listner
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -111,30 +110,31 @@ public class ProfileExploreActivity extends AppCompatActivity implements View.On
 
                 int id = menuItem.getItemId();
 
-                switch (id){
+                switch (id) {
 
                     case R.id.nutrition_nav_id:
-                       startActivity(new Intent(ProfileExploreActivity.this,
-                               ExploreChartActivity.class));
+                        startActivity(new Intent(ProfileExploreActivity.this,
+                                ExploreChartActivity.class));
                         break;
 
                     case R.id.activity_nav_id:
-                       startActivity(new Intent(ProfileExploreActivity.this,
-                               RecipesActivity.class));
+                        startActivity(new Intent(ProfileExploreActivity.this,
+                                RecipesActivity.class));
                         break;
 
                     case R.id.account_nav_id:
                         startActivity(new Intent(ProfileExploreActivity.this,
-                                RecipesWeeklyActivity.class));
+                                ProfileEvaActivity.class));
                         break;
 
                     case R.id.setting_nav_id:
                         startActivity(new Intent(ProfileExploreActivity.this,
-                                ProfileEvaActivity.class));
+                                RecipesWeeklyActivity.class));
+
                         break;
 
-                        default:
-                            return true;
+                    default:
+                        return true;
                 }
                 drawerLayout.closeDrawers();
                 return true;
@@ -142,21 +142,19 @@ public class ProfileExploreActivity extends AppCompatActivity implements View.On
         });
 
 
-
         // adapter initialize to Count .. ##
         RecyclerViewAdapterCount adapterCount = new RecyclerViewAdapterCount(this);
-        recyclerCountView.setLayoutManager( new LinearLayoutManager(this,
+        recyclerCountView.setLayoutManager(new LinearLayoutManager(this,
                 LinearLayoutManager.HORIZONTAL, false));
         recyclerCountView.setAdapter(adapterCount);
 
 
         // adapter initialize to Icon .. ##
-       RecyclerViewAdapterIcon adapterIcon = new RecyclerViewAdapterIcon(this,
-               itemImageModelIconList);
+        RecyclerViewAdapterIcon adapterIcon = new RecyclerViewAdapterIcon(this,
+                itemImageModelIconList);
         recyclerView.setLayoutManager(new GridLayoutManager
                 (ProfileExploreActivity.this, 3));
         recyclerView.setAdapter(adapterIcon);
-
 
 
         // create a arrayList all view adding ... ##
@@ -177,18 +175,13 @@ public class ProfileExploreActivity extends AppCompatActivity implements View.On
         recyclerView.setAdapter(adapter);
 
 
-
-
-
-
-
     }
 
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        if (toggle.onOptionsItemSelected(item)){
+        if (toggle.onOptionsItemSelected(item)) {
 
             return true;
         }
@@ -196,13 +189,13 @@ public class ProfileExploreActivity extends AppCompatActivity implements View.On
         return super.onOptionsItemSelected(item);
     }
 
-    public void setStatusBarColor(Activity activity, int colorResourceId){
+    public void setStatusBarColor(Activity activity, int colorResourceId) {
 
         Window window = activity.getWindow();
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
 
-       window.setStatusBarColor(
-               ContextCompat.getColor(activity,colorResourceId));
+        window.setStatusBarColor(
+                ContextCompat.getColor(activity, colorResourceId));
 
 
     }
@@ -211,17 +204,17 @@ public class ProfileExploreActivity extends AppCompatActivity implements View.On
     public void onClick(View view) {
 
         // go to another activity... ##
-        if (view.getId() == R.id.button_explore_id){
+        if (view.getId() == R.id.button_explore_id) {
             startActivity(new Intent(ProfileExploreActivity.this,
                     ExploreChartActivity.class));
 
         }
 
         // go to search activity from menu... ##
-         if (view.getId() == R.id.searchtoolbar_id){
+        if (view.getId() == R.id.searchtoolbar_id) {
 
-            startActivity(new Intent(ProfileExploreActivity.this,
-                    DietaryHardingeActivity.class));
+            /*startActivity(new Intent(ProfileExploreActivity.this,
+                    DietaryHardingeActivity.class));*/
         }
 
 

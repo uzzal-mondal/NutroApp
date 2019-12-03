@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 import com.example.nutroapp.R;
 import com.example.nutroapp.recipesweekly_activity_06.RecipesWeeklyActivity;
+import com.example.nutroapp.schedule_activity_03.ScheduleActivity;
 
 import java.util.ArrayList;
 import java.util.List;

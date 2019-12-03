@@ -16,8 +16,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.nutroapp.R;
-import com.example.nutroapp.dietaryhardinge_social_05_convertfragment.SpinnerAdapter;
-import com.example.nutroapp.dietaryhardinge_social_05_convertfragment.SpinnerModel;
 import com.example.nutroapp.profilelula_social_03.ProfileLulaActivity;
 
 public class EvaOlsonActivity extends AppCompatActivity {
@@ -64,31 +62,31 @@ public class EvaOlsonActivity extends AppCompatActivity {
 
 
         // spinner details design in android..
-        SpinnerModel[] models = new SpinnerModel[6];
+        SpinnerModelEva[] models = new SpinnerModelEva[6];
 
-        models[0] = new SpinnerModel();
+        models[0] = new SpinnerModelEva();
         models[0].setId(1);
-        models[0].setVegName("Add");
+        models[0].setTextadd("Add");
 
-        models[1] = new SpinnerModel();
+        models[1] = new SpinnerModelEva();
         models[1].setId(2);
-        models[1].setVegName("Add");
+        models[1].setTextadd("Add");
 
-        models[2] = new SpinnerModel();
+        models[2] = new SpinnerModelEva();
         models[2].setId(3);
-        models[2].setVegName("Add");
+        models[2].setTextadd("Add");
 
-        models[3] = new SpinnerModel();
+        models[3] = new SpinnerModelEva();
         models[3].setId(4);
-        models[3].setVegName("Add");
+        models[3].setTextadd("Add");
 
-        models[4] = new SpinnerModel();
+        models[4] = new SpinnerModelEva();
         models[4].setId(5);
-        models[4].setVegName("Add");
+        models[4].setTextadd("Add");
 
-        models[5] = new SpinnerModel();
+        models[5] = new SpinnerModelEva();
         models[5].setId(6);
-        models[5].setVegName("Add");
+        models[5].setTextadd("Add");
 
         //set a spinner adapter ... ##
         spinnerAdapter = new SpinnerAdapter(EvaOlsonActivity.this,
@@ -101,7 +99,7 @@ public class EvaOlsonActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView,
                                        View view, int position, long l) {
 
-                SpinnerModel spinnerModel = spinnerAdapter.getItem(position);
+                SpinnerModelEva spinnerModel = spinnerAdapter.getItem(position);
                /* Toast.makeText(ScheduleActivity.this,
                         "Id: " + monthModel.getId() + " \nname: " +
                         monthModel.getMonthName(), Toast.LENGTH_SHORT).show();*/

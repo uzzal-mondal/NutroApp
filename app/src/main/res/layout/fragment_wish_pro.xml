@@ -6,22 +6,14 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-    <!-- <include
-         android:id="@+id/includelayout_id"
-         android:layout_width="0dp"
-         android:layout_height="wrap_content"
-         layout="@layout/custom_tool_bso"
-         android:layout_marginBottom="32dp"
-         app:layout_constraintStart_toStartOf="parent"
-         app:layout_constraintTop_toTopOf="parent"
-         app:layout_constraintEnd_toEndOf="parent"/>-->
+
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/todaytext"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+
         android:layout_marginStart="16dp"
-        android:layout_marginTop="64dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:fontFamily="@font/sans_medium"
@@ -38,9 +30,9 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclertoday"
         android:layout_width="0dp"
-        android:layout_height="350dp"
+        android:layout_height="300dp"
         android:layout_marginStart="8dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/textplaces"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -52,16 +44,14 @@
         android:id="@+id/textplaces"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="24dp"
         android:layout_marginEnd="16dp"
-
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="4dp"
         android:gravity="start"
         android:text="Places"
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="18sp"
-
         app:fontFamily="@font/sans_medium"
         app:layout_constraintBottom_toTopOf="@+id/recyclerplaceid"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,11 +63,11 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerplaceid"
         android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_nav_id"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textplaces" />
 </androidx.constraintlayout.widget.ConstraintLayout>

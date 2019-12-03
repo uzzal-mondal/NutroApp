@@ -10,15 +10,14 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.example.nutroapp.dietaryhardinge_social_05_convertfragment.SpinnerModel;
 
-public class SpinnerAdapter extends ArrayAdapter<SpinnerModel> {
+public class SpinnerAdapter extends ArrayAdapter<SpinnerModelEva> {
 
     private Context context;
-    private SpinnerModel[] spinnerModels;
+    private SpinnerModelEva[] spinnerModels;
 
     public SpinnerAdapter(@NonNull Context context, int textViewResourceId,
-                          SpinnerModel[] spinnerModels) {
+                          SpinnerModelEva[] spinnerModels) {
         super(context, textViewResourceId, spinnerModels);
         this.context = context;
         this.spinnerModels = spinnerModels;
@@ -39,7 +38,7 @@ public class SpinnerAdapter extends ArrayAdapter<SpinnerModel> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         TextView label = (TextView) super.getView(position, convertView, parent);
         label.setTextColor(Color.WHITE);
-        label.setText(spinnerModels[position].getVegName());
+        label.setText(spinnerModels[position].getTextadd());
 
         return label;
     }
@@ -48,7 +47,7 @@ public class SpinnerAdapter extends ArrayAdapter<SpinnerModel> {
     public View getDropDownView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         TextView label = (TextView) super.getDropDownView(position, convertView, parent);
         label.setTextColor(Color.BLACK);
-        label.setText(spinnerModels[position].getVegName());
+        label.setText(spinnerModels[position].getTextadd());
 
         return label;
     }

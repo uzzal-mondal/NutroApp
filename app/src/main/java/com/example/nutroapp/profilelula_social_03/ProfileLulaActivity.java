@@ -17,6 +17,7 @@ import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.example.nutroapp.R;
+import com.example.nutroapp.planning_stats_06.PlanningActivity;
 import com.example.nutroapp.profileeva_social_04.ProfileEvaActivity;
 
 import java.util.ArrayList;
@@ -62,7 +63,7 @@ public class ProfileLulaActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(ProfileLulaActivity.this,
-                        ProfileEvaActivity.class));
+                       PlanningActivity.class));
             }
         });
 

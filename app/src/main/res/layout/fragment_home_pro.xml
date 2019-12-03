@@ -11,33 +11,15 @@
 
 
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <include
-            android:id="@+id/includelayout_id"
-            layout="@layout/custom_recipes_toolbar"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
     <de.hdodenhof.circleimageview.CircleImageView
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/image_profile_eva_olson_id"
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="68dp"
+
         android:layout_marginRight="50dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="16dp"
         android:src="@drawable/circle_image_eva_olson"
         app:civ_border_color="@color/color_white"
         app:civ_border_width="2dp"
@@ -50,7 +32,7 @@
         android:id="@+id/text_main_eva_olson_id"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+
         android:layout_marginEnd="100dp"
         android:gravity="start"
         android:text="@string/eva_olson"
@@ -88,7 +70,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
         android:layout_marginEnd="56dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/text_eva_olson_id"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -193,7 +175,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="2dp"
         android:fontFamily="@font/sans_regular"
         android:gravity="start"
         android:text="@string/text_eva_olson_string"
@@ -211,7 +193,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="4dp"
         android:fontFamily="@font/sans_medium"
         android:gravity="start"
         android:text="Inspiration"
@@ -243,7 +225,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_id"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -340,7 +322,7 @@
             android:id="@+id/viewPagerRecent_id"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -349,19 +331,5 @@
             app:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-   <!-- <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation_id"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:background="@color/color_white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraint_recently_id"
-        app:menu="@menu/bottom_menu_evaolson" />-->
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

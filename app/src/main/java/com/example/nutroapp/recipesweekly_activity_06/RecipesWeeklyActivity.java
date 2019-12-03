@@ -18,7 +18,8 @@ import android.widget.TextView;
 
 import com.example.nutroapp.R;
 import com.example.nutroapp.evaolson_social_02.EvaOlsonActivity;
-import com.example.nutroapp.todayspecial_social_01.TodayActivity;
+import com.example.nutroapp.schedule_activity_03.ScheduleActivity;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,8 +62,8 @@ public class RecipesWeeklyActivity extends AppCompatActivity {
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(RecipesWeeklyActivity.this,
-                        TodayActivity.class));
+               startActivity(new Intent(RecipesWeeklyActivity.this,
+                        ScheduleActivity.class));
 
             }
         });

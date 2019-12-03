@@ -17,13 +17,13 @@ public class SecondTodayWishRecyclerAdapter extends
         RecyclerView.Adapter<SecondTodayWishRecyclerAdapter.MySecondTodayHolder> {
 
     private Context context;
-    private List<SecondTodayWishModel> todayWishModels;
+    private List<SecondTodayWishModel> secondTodayWishModelList;
 
 
     // create a constructor.. ##
     public SecondTodayWishRecyclerAdapter(Context context, List<SecondTodayWishModel> todayWishModels) {
         this.context = context;
-        this.todayWishModels = todayWishModels;
+        this.secondTodayWishModelList = todayWishModels;
     }
 
     @NonNull
@@ -42,13 +42,13 @@ public class SecondTodayWishRecyclerAdapter extends
     @Override
     public void onBindViewHolder(@NonNull MySecondTodayHolder holder, int position) {
 
-        holder.imageTs.setImageResource(todayWishModels.get(position).getImage());
+        holder.imageTs.setImageResource(secondTodayWishModelList.get(position).getImage());
         //  holder.headdingText.setText(secondTodayModels.get(position).getText());
     }
 
     @Override
     public int getItemCount() {
-        return todayWishModels.size();
+        return secondTodayWishModelList.size();
     }
 
     public class MySecondTodayHolder extends RecyclerView.ViewHolder {

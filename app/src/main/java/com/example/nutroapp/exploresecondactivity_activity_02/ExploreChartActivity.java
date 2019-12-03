@@ -20,6 +20,7 @@ import android.widget.TextView;
 
 import com.example.nutroapp.R;
 import com.example.nutroapp.exploreactivity_Activity_01.ProfileExploreActivity;
+import com.example.nutroapp.recipes_activity_05.RecipesActivity;
 import com.example.nutroapp.schedule_activity_03.ScheduleActivity;
 
 import java.util.ArrayList;
@@ -66,12 +67,7 @@ public class ExploreChartActivity extends AppCompatActivity {
             }
         });
 
-       /* Toolbar toolbar = (Toolbar) findViewById(R.id.customtoolbar);
-        setSupportActionBar(toolbar); //No Problerm
 
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setLogo(R.drawable.ic_back);
-        getSupportActionBar().setDisplayUseLogoEnabled(true);*/
 
 
 
@@ -82,7 +78,7 @@ public class ExploreChartActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(ExploreChartActivity.this,
-                        ScheduleActivity.class));
+                        RecipesActivity.class));
             }
         });
 

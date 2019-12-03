@@ -3,6 +3,7 @@ package com.example.nutroapp.profileeva_social_04;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -30,22 +31,9 @@ import com.tbuonomo.viewpagerdotsindicator.DotsIndicator;
 
 import java.util.List;
 
-public class ProfileEvaActivity extends AppCompatActivity {
-
-
-    private RecyclerView recyclerViewPro;
-    private List<ProfileItemModel> profileItemModelList;
-    private TextView textViewEvaOlson;
-    private ViewPager viewPager;
-    private DotsIndicator indicator;
+public class ProfileEvaActivity extends AppCompatActivity implements View.OnClickListener {
     private BottomNavigationView bottomNavigationView;
-    private AppCompatImageView backtoomenuimage;
-
-
-
-     FragmentManager fragmentManager;
-     FragmentTransaction ft;
-
+    private AppCompatImageView imageViewBack;
 
 
     @Override
@@ -60,46 +48,11 @@ public class ProfileEvaActivity extends AppCompatActivity {
                     .setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         }
 
-        setStatusBar(this,R.color.color_white);
+        setStatusBar(this, R.color.color_white);
+        imageViewBack = findViewById(R.id.menuback_id);
+        imageViewBack.setOnClickListener(this);
 
-
-       // fragment home declare... ##
-        fragmentManager = getSupportFragmentManager();
-        ft = fragmentManager.beginTransaction();
-        FragmentHomeEva fragmentHomeEva = new FragmentHomeEva();
-        ft.add(R.id.fragment_container, fragmentHomeEva);
-        ft.addToBackStack(null);
-        ft.commit();
-
-
-        //fragment search .. ##
-        fragmentManager = getSupportFragmentManager();
-        ft = fragmentManager.beginTransaction();
-        FragmentSearchFresh fragmentSearchFresh = new FragmentSearchFresh();
-        ft.replace(R.id.fragment_container,fragmentSearchFresh);
-        ft.addToBackStack(null);
-        ft.commit();
-
-
-
-        // fragment calendar hardiange .. ##
-        fragmentManager = getSupportFragmentManager();
-        ft = fragmentManager.beginTransaction();
-        FragmentCalendarHardiange calendarHardiange = new FragmentCalendarHardiange();
-        ft.replace(R.id.fragment_container,calendarHardiange);
-        ft.addToBackStack(null);
-        ft.commit();
-
-
-
-        //fragment wish list ... ##
-        fragmentManager = getSupportFragmentManager();
-        ft = fragmentManager.beginTransaction();
-        FragmentWishToday fragmentWishToday = new FragmentWishToday();
-        ft.replace(R.id.fragment_container,fragmentWishToday);
-        ft.addToBackStack(null);
-        ft.commit();
-
+        loadFragment(new FragmentHomeEva());
 
 
         // bottom navigation fragment in android ... ##
@@ -107,206 +60,68 @@ public class ProfileEvaActivity extends AppCompatActivity {
         loadFragment(new FragmentHomeEva());
 
         // bottom navigation listener.. ##
-       bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-           @Override
-           public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-               Fragment fragment;
-               int id = menuItem.getItemId();
-
-              switch (id){
-
-                  case R.id.home_bottom_item:
-                      fragment = new FragmentHomeEva();
-                      loadFragment(fragment);
-                      return true;
-
-
-                  case R.id.search_bottom_item:
-                      fragment = new FragmentSearchFresh();
-                      loadFragment(fragment);
-                      return  true;
-
-                  case R.id.calendar_bottom_item:
-
-                      fragment = new FragmentCalendarHardiange();
-                      loadFragment(fragment);
-                      return true;
-
-
-                  case R.id.wish_bottom_item:
-                      fragment = new FragmentWishToday();
-                      loadFragment(fragment);
-                      return true;
-
-              }
-
-               return false;
-           }
-       });
-
-
-
-
-         /* toolbar = getSupportActionBar();
-        // load the store fragment by default.
-         loadFragment(new FragmentHomeEva());
-
-
-
-
-        // Transparent action bar define .. ##
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            getWindow()
-                    .getDecorView()
-                    .setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-        }
-        setStatusBarColor(this, R.color.color_white);
-
-       *//* // use for transparent ... #
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);*//*
-
-
-
-
-        // this is for find all view ...##
-        textViewEvaOlson = findViewById(R.id.text_main_eva_olson_id);
-        recyclerViewPro = findViewById(R.id.recyclerView_pro_eva_id);
-        viewPager = findViewById(R.id.viewPagerRecent_id);
-        indicator = findViewById(R.id.inidicator_recent_id);
-
-        backtoomenuimage = findViewById(R.id.menuback_id);
-        backtoomenuimage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
-
-        // fragment default to set a Home Activity.. ##
-
-       *//* if (savedInstanceState == null) {
-
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fragment_container, new FragmentHome())
-                    .commit();
-
-        }*//*
-
-
-        // bottom navigation listener.. ##
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView
-                .OnNavigationItemSelectedListener() {
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 Fragment fragment;
                 int id = menuItem.getItemId();
 
-
                 switch (id) {
+
                     case R.id.home_bottom_item:
                         fragment = new FragmentHomeEva();
                         loadFragment(fragment);
-                        return true;
-
+                        break;
 
                     case R.id.search_bottom_item:
                         fragment = new FragmentSearchFresh();
                         loadFragment(fragment);
-                      return  true;
+                        break;
 
                     case R.id.calendar_bottom_item:
-
                         fragment = new FragmentCalendarHardiange();
-                         loadFragment(fragment);
-                        return true;
+                        loadFragment(fragment);
+                        break;
 
 
                     case R.id.wish_bottom_item:
                         fragment = new FragmentWishToday();
                         loadFragment(fragment);
-                        return true;
 
+                        break;
 
                 }
 
-                return false;
-
-            }
-
-        });
-
-
-        // go to schedule activity ...##
-        textViewEvaOlson.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                startActivity(new Intent(ProfileEvaActivity.this,
-                        DietaryHardingeActivity.class));
+                return true;
             }
         });
 
-
-        // paritcipants profileModel List add to ArrayList ...##
-        profileItemModelList = new ArrayList<>();
-        profileItemModelList.add(new ProfileItemModel(R.drawable.profile_eva_olson_1));
-        profileItemModelList.add(new ProfileItemModel(R.drawable.profile_eva_olson_2));
-        profileItemModelList.add(new ProfileItemModel(R.drawable.profile_eva_ollson_3));
-        profileItemModelList.add(new ProfileItemModel(R.drawable.profile_eva_olson_2));
-        profileItemModelList.add(new ProfileItemModel(R.drawable.profile_eva_olson_1));
-        profileItemModelList.add(new ProfileItemModel(R.drawable.profile_eva_ollson_3));
-        profileItemModelList.add(new ProfileItemModel(R.drawable.profile_eva_olson_2));
-        profileItemModelList.add(new ProfileItemModel(R.drawable.profile_eva_olson_1));
-        profileItemModelList.add(new ProfileItemModel(R.drawable.profile_eva_ollson_3));
-        profileItemModelList.add(new ProfileItemModel(R.drawable.profile_eva_olson_1));
-        profileItemModelList.add(new ProfileItemModel(R.drawable.profile_eva_olson_2));
-        profileItemModelList.add(new ProfileItemModel(R.drawable.profile_eva_ollson_3));
-        profileItemModelList.add(new ProfileItemModel(R.drawable.profile_eva_olson_2));
-        profileItemModelList.add(new ProfileItemModel(R.drawable.profile_eva_olson_1));
-
-        // recycler adapter set ...
-        ProfileRecyclerAdapter adapter = new ProfileRecyclerAdapter(this,
-                profileItemModelList);
-        recyclerViewPro.setLayoutManager(new LinearLayoutManager(this,
-                RecyclerView.HORIZONTAL, false));
-        recyclerViewPro.setAdapter(adapter);
-
-
-    }
-
-    public void setStatusBarColor(Activity activity, int colorResourceId) {
-
-        Window window = activity.getWindow();
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.setStatusBarColor(ContextCompat.getColor(activity, colorResourceId));
-
-    }
-
-    private void loadFragment(Fragment fragment) {
-        // load fragment
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.fragment_container, fragment);
-        transaction.addToBackStack(null);
-        transaction.commit();
-    }*/
 
     }
 
     // this is method using to setStatus bar ... ##
-    public void setStatusBar(Activity activity, int colorResourceId){
+    public void setStatusBar(Activity activity, int colorResourceId) {
 
         Window window = activity.getWindow();
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.setStatusBarColor(ContextCompat.getColor(activity,colorResourceId));
+        window.setStatusBarColor(ContextCompat.getColor(activity, colorResourceId));
     }
 
     private void loadFragment(Fragment fragment) {
         // load fragment
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.fragment_container, fragment);
-        transaction.addToBackStack(null);
+        //transaction.addToBackStack(null);
         transaction.commit();
     }
 
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.menuback_id:
+                finish();
+                break;
+        }
+
+    }
 }

@@ -13,7 +13,6 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.nutroapp.R;
-import com.example.nutroapp.freshforse_social_06convartingfragment.FreshModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +22,7 @@ public class FreshSearchRecyclerAdapter extends RecyclerView
 
     List<CardView> cardViewList = new ArrayList<>();
     private Context context;
-    private List<FreshModel> freshModelList;
+    private List<FreshSearchModel> freshModelList;
 
     // int row_index = 0;
     public FreshSearchRecyclerAdapter(Context context) {
