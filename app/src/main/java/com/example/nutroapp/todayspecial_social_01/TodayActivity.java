@@ -1,7 +1,11 @@
 package com.example.nutroapp.todayspecial_social_01;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.appcompat.widget.AppCompatTextView;
 import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -10,6 +14,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -17,6 +22,7 @@ import android.widget.TextView;
 
 import com.example.nutroapp.R;
 import com.example.nutroapp.evaolson_social_02.EvaOlsonActivity;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +34,9 @@ public class TodayActivity extends AppCompatActivity {
     private List<TodayModel> todayModelList;
     private List<SecondTodayModel> secondTodayModelList;
 
-    TextView todayText;
+    private AppCompatTextView todayText;
+    private AppCompatImageView imageback;
+
 
 
 
@@ -46,9 +54,28 @@ public class TodayActivity extends AppCompatActivity {
         setStatusBarColor(this, R.color.white);
 
 
+       /* // fragment default to set a Home Activity.. ##
+        navigationView = findViewById(R.id.bottom_nav_id);
+        if (savedInstanceState == null){
+
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.constraintFragment_container_id, new FragmentHome())
+                    .commit();
+
+        }
+*/
+
         recyclerView = findViewById(R.id.recyclertoday);
         recyclerViewPlace = findViewById(R.id.recyclerplaceid);
         todayText = findViewById(R.id.todaytext);
+        imageback = findViewById(R.id.backmenu_id);
+
+        imageback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
         // go to another actiivty
         todayText.setOnClickListener(new View.OnClickListener() {
@@ -98,9 +125,8 @@ public class TodayActivity extends AppCompatActivity {
 
 
 
+
      /*       second     -----------------------------------------------   */
-
-
         // next places recycler and adapter .. ##
 
         SecondTodayRecyclerAdapter adapter1 = new
@@ -120,7 +146,43 @@ public class TodayActivity extends AppCompatActivity {
                 SecondTodayRecyclerAdapter(this,modelList);
         recyclerViewPlace.setAdapter(todayRecyclerAdapter);
 
+/*
 
+
+         */
+/*.................. bottom navigation view ...................*//*
+
+
+        navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+
+                int id = menuItem.getItemId();
+                Fragment fragment = null;
+
+                if (id == R.id.home_bottom_id){
+                    fragment = new  FragmentHome();
+                }else if(id == R.id.search_bottom_id){
+                    fragment = new FragmentSearch();
+
+                }else if(id == R.id.calendar_bottom_id){
+                    fragment = new FragmentCalendar();
+
+                }else if(id == R.id.wish_bottom_id){
+                    fragment = new FragmentWish();
+                }
+
+                getSupportFragmentManager().beginTransaction().
+                        replace(R.id.constraintFragment_container_id,fragment);
+
+
+                return true;
+            }
+        });
+
+
+*/
 
     }
 

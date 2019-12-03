@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/schedulenutrition_nav_id"
+        android:icon="@drawable/nav_search"
+        android:title="Nutrition"/>
+
+
+    <item android:id="@+id/scheduleactivity_nav_id"
+        android:icon="@drawable/nav_activity_icon"
+        android:title="Activity"/>
+
+    <item android:id="@+id/schedulecalendar_nav_id"
+        android:icon="@drawable/nav_calendar_icon"
+        android:title="Calendar"/>
+
+    <item android:id="@+id/scheduleaccount_nav_id"
+        android:icon="@drawable/nav_account_icon"
+        android:title="Account"/>
+
+    <item android:id="@+id/schedulesetting_nav_id"
+        android:icon="@drawable/nav_setting_icon"
+        android:title="Settings"/>
+
+
+
+</menu>
+

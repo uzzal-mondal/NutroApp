@@ -1,6 +1,8 @@
 package com.example.nutroapp.login_02;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.appcompat.widget.AppCompatTextView;
 import androidx.core.content.ContextCompat;
 
 import android.app.Activity;
@@ -19,7 +21,9 @@ import com.example.nutroapp.signup_01.CreateAcountActivity;
 public class LoginWithSignUpActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView textLogin ;
+    private AppCompatTextView textcreateacc;
     private ImageView profileImage;
+    private AppCompatImageView backImage;
 
 
 
@@ -38,12 +42,23 @@ public class LoginWithSignUpActivity extends AppCompatActivity implements View.O
         setStatusBarColor(this, R.color.color_white);
 
         // find id ... ##
-        profileImage = findViewById(R.id.profile_image);
+        profileImage = findViewById(R.id.profile_image_id);
         textLogin = findViewById(R.id.textLogin_id);
+        textcreateacc = findViewById(R.id.textCreateAccount);
+        backImage = findViewById(R.id.imagebackcreate_id);
+        backImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+             onBackPressed();
+            }
+        });
+
+
 
         //listner ... ##
         profileImage.setOnClickListener(this);
         textLogin.setOnClickListener(this);
+        textcreateacc.setOnClickListener(this);
 
     }
     // set status color ... ##
@@ -60,12 +75,12 @@ public class LoginWithSignUpActivity extends AppCompatActivity implements View.O
     @Override
     public void onClick(View view) {
 
-        if (view.getId() == R.id.profile_image){
-            startActivity(new Intent(LoginWithSignUpActivity.this,
-                    CreateAcountActivity.class));
-        }else if(view.getId() == R.id.textLogin_id){
+        if(view.getId() == R.id.textLogin_id){
             startActivity(new Intent(LoginWithSignUpActivity.this,
                     LoginActivity.class));
+        }else if(view.getId() == R.id.textCreateAccount){
+            startActivity(new Intent(LoginWithSignUpActivity.this,
+                    CreateAcountActivity.class));
         }
 
 

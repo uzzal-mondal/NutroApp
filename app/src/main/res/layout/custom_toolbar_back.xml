@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/customToolbar_back_id"
+    android:id="@+id/custom_toolbar_back"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
   <androidx.appcompat.widget.Toolbar
@@ -17,11 +17,11 @@
       app:layout_constraintTop_toTopOf="parent">
 
       <androidx.appcompat.widget.AppCompatImageView
-          android:id="@+id/backArrowImage_id"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
+          android:id="@+id/imagebackcreate_id"
+          android:layout_width="24dp"
+          android:layout_height="24dp"
           android:layout_marginLeft="16dp"
-          android:src="@drawable/ic_back_create"/>
+          android:src="@drawable/back_arrow_page"/>
 
   </androidx.appcompat.widget.Toolbar>
 

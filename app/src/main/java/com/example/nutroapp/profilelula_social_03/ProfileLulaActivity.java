@@ -1,6 +1,8 @@
 package com.example.nutroapp.profilelula_social_03;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.appcompat.widget.AppCompatTextView;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
@@ -25,7 +27,8 @@ public class ProfileLulaActivity extends AppCompatActivity {
     private RecyclerView recyclerViewItem;
     private List<ItemModel> itemModelList;
     private StaggeredGridLayoutManager staggeredGridLayoutManager;
-    private TextView textViewLulaLong;
+    private AppCompatTextView textViewLulaLong;
+    private AppCompatImageView backtoolimage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +45,16 @@ public class ProfileLulaActivity extends AppCompatActivity {
         setStatusBar(this,R.color.color_white);
 
         // find view
-        textViewLulaLong = (TextView) findViewById(R.id.text_profile_lua_long_id);
-        recyclerViewItem = (RecyclerView) findViewById(R.id.recycler_lula_long_id);
+        textViewLulaLong =  findViewById(R.id.text_profile_lua_long_id);
+        recyclerViewItem =  findViewById(R.id.recycler_lula_long_id);
+        backtoolimage = findViewById(R.id.backtool_id);
+
+        backtoolimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
 
         // text profile lula long to explore activity .. ##

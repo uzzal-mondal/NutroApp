@@ -1,6 +1,7 @@
 package com.example.nutroapp.statasactivity_stats_01;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -35,6 +36,7 @@ public class StatasActivity extends AppCompatActivity {
     List<CountModel> countModelList;
 
     TextView tvActivity;
+    AppCompatImageView backImage;
 
 
     @Override
@@ -50,9 +52,17 @@ public class StatasActivity extends AppCompatActivity {
         setStatusColor(this, R.color.color_white);
 
         tvActivity = findViewById(R.id.textactivity);
-        spinner = (Spinner) findViewById(R.id.spinnerid);
+        spinner =  findViewById(R.id.spinnerid);
         btnCalendar = findViewById(R.id.caldendarid);
         recyclerView = findViewById(R.id.recyclercount);
+        backImage = findViewById(R.id.menubacktollbar_id);
+
+        backImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
 
         tvActivity.setOnClickListener(new View.OnClickListener() {

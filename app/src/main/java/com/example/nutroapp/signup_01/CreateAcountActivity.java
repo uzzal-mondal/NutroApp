@@ -1,6 +1,7 @@
 package com.example.nutroapp.signup_01;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 import android.app.Activity;
@@ -17,6 +18,7 @@ import com.example.nutroapp.login_02.LoginActivity;
 public class CreateAcountActivity extends AppCompatActivity {
 
     private Button buttonCreateAccount;
+    private AppCompatImageView imageCreateAc;
     Toolbar toolbar;
 
     @Override
@@ -34,8 +36,18 @@ public class CreateAcountActivity extends AppCompatActivity {
        /* toolbar = findViewById(R.id.customToolbar_back_id);
         setSupportActionBar(toolbar);*/
 
-
+       // find id
+        imageCreateAc = findViewById(R.id.imagebackcreate_id);
         buttonCreateAccount =  findViewById(R.id.button_get_id);
+
+        //back image
+        imageCreateAc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
         buttonCreateAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,6 +55,9 @@ public class CreateAcountActivity extends AppCompatActivity {
                         LoginActivity.class));
             }
         });
+
+
+
 
     }
     // this is method using to setStatus bar ... ##

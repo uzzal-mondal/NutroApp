@@ -1,6 +1,8 @@
-package com.example.nutroapp.dietaryhardinge_social_05;
+package com.example.nutroapp.dietaryhardinge_social_05_convertfragment;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.appcompat.widget.AppCompatTextView;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,13 +16,9 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.Spinner;
-import android.widget.TextView;
 
 import com.example.nutroapp.R;
-import com.example.nutroapp.freshforse_social_06.FreshForseActivity;
-import com.example.nutroapp.schedule_activity_03.MonthModel;
-import com.example.nutroapp.schedule_activity_03.ScheduleActivity;
-import com.example.nutroapp.schedule_activity_03.SpinerAdapter;
+import com.example.nutroapp.freshforse_social_06convartingfragment.FreshForseActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,10 +27,10 @@ public class DietaryHardingeActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     List<ItemImgModel> itemImgModelList;
-    TextView textView;
+   private AppCompatTextView textView;
+   private AppCompatImageView backImage;
 
-
-    Spinner spinner;
+    private Spinner spinner;
     private SpinnerAdapter spinnerAdapter;
 
     @Override
@@ -52,6 +50,15 @@ public class DietaryHardingeActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recycler);
         textView = findViewById(R.id.hardinagetext);
         spinner = findViewById(R.id.spinner_id);
+
+        //menu find id ..##
+        backImage = findViewById(R.id.imagebackcreate_id);
+        backImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
         // go to another acitivity... ##
         textView.setOnClickListener(new View.OnClickListener() {

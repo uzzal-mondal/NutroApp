@@ -16,12 +16,12 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/menu_id"
+            android:id="@+id/backtool_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
             android:layout_marginRight="240dp"
-            android:src="@drawable/ic_menu_create"/>
+            android:src="@drawable/back_arrow_page"/>
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="wrap_content"

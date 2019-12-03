@@ -1,4 +1,4 @@
-package com.example.nutroapp.freshforse_social_06;
+package com.example.nutroapp.freshforse_social_06convartingfragment;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -24,8 +23,8 @@ public class FreshRecyclerAdapter extends RecyclerView.Adapter<FreshRecyclerAdap
     private Context context;
     private List<FreshModel> freshModelList;
 
-    // int row_index = 0;
 
+    // int row_index = 0;
     public FreshRecyclerAdapter(Context context) {
         this.context = context;
       //  this.freshModelList = freshModelList;

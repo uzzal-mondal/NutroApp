@@ -10,9 +10,9 @@
 
     <include
         android:id="@+id/includelayout_id"
+        layout="@layout/custom_statics_layout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        layout="@layout/custom_statics_layout"
         android:layout_marginBottom="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

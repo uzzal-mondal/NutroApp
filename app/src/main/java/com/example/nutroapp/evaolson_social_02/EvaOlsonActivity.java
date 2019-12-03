@@ -1,6 +1,7 @@
 package com.example.nutroapp.evaolson_social_02;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.core.content.ContextCompat;
 
 import android.app.Activity;
@@ -15,9 +16,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.nutroapp.R;
-import com.example.nutroapp.dietaryhardinge_social_05.DietaryHardingeActivity;
-import com.example.nutroapp.dietaryhardinge_social_05.SpinnerAdapter;
-import com.example.nutroapp.dietaryhardinge_social_05.SpinnerModel;
+import com.example.nutroapp.dietaryhardinge_social_05_convertfragment.SpinnerAdapter;
+import com.example.nutroapp.dietaryhardinge_social_05_convertfragment.SpinnerModel;
 import com.example.nutroapp.profilelula_social_03.ProfileLulaActivity;
 
 public class EvaOlsonActivity extends AppCompatActivity {
@@ -25,6 +25,7 @@ public class EvaOlsonActivity extends AppCompatActivity {
     TextView evaTv;
     Spinner spin;
     SpinnerAdapter spinnerAdapter;
+    AppCompatImageView backmenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +44,14 @@ public class EvaOlsonActivity extends AppCompatActivity {
         //find .. ##
         evaTv = findViewById(R.id.evatex);
         spin = findViewById(R.id.spinner);
+        backmenu = findViewById(R.id.backmenu_id);
+
+        backmenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
         //got to another activity .. ##
         evaTv.setOnClickListener(new View.OnClickListener() {

@@ -1,6 +1,7 @@
 package com.example.nutroapp.overview_stats_02;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.core.content.ContextCompat;
 
 import android.app.Activity;
@@ -23,6 +24,7 @@ public class OverviewActivity extends AppCompatActivity {
 
     private TextView tv;
     private SparkLineLayout sparkLineLayout;
+    private AppCompatImageView backImage;
 
 
 
@@ -40,7 +42,15 @@ public class OverviewActivity extends AppCompatActivity {
 
         //findview
         tv = findViewById(R.id.textoverview);
+        backImage = findViewById(R.id.menubacktollbar_id);
         // mchart = findViewById(R.id.linecahrt);
+
+        backImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
 
         tv.setOnClickListener(new View.OnClickListener() {

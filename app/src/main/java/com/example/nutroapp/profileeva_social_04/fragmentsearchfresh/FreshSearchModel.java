@@ -1,13 +1,15 @@
-package com.example.nutroapp.freshforse_social_06;
+package com.example.nutroapp.profileeva_social_04.fragmentsearchfresh;
 
-public class FreshModel {
+public class FreshSearchModel {
 
     private int iconImage;
 
-    public FreshModel(int iconImage) {
+
+    public FreshSearchModel(int iconImage) {
         this.iconImage = iconImage;
     }
 
+    //getter and setter
     public int getIconImage() {
         return iconImage;
     }

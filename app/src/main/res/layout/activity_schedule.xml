@@ -67,10 +67,8 @@
 
         android:gravity="center"
 
-
         android:text="@string/healthy_recipes"
         android:textSize="16sp"
-
         android:textColor="@color/color_health"
         app:fontFamily="@font/sans_regular"
 
@@ -86,8 +84,6 @@
         android:layout_height="124dp"
         android:layout_marginStart="32dp"
         android:layout_marginBottom="32dp"
-
-
         app:animate="true"
         app:animateDuration="600"
         app:fillColor="@color/color_white"

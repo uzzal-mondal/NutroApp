@@ -9,17 +9,25 @@
     tools:context=".statsdays_activity_05.StatsDayActivity">
 
 
+    <include
+        android:id="@+id/includelayout_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        layout="@layout/custom_toolbar_day_color"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
 
 <!--    second card view-->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardviewstatics"
         android:layout_width="0dp"
         android:layout_height="0dp"
-
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="72dp"
         app:cardCornerRadius="24dp"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -125,7 +133,6 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:src="@drawable/ic_explore_6"
-
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
 

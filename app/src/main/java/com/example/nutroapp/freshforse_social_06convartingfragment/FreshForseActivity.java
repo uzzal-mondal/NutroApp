@@ -1,6 +1,7 @@
-package com.example.nutroapp.freshforse_social_06;
+package com.example.nutroapp.freshforse_social_06convartingfragment;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,7 +18,6 @@ import android.widget.ImageView;
 import com.example.nutroapp.R;
 import com.example.nutroapp.helper.OverlapDecoration;
 import com.example.nutroapp.statasactivity_stats_01.StatasActivity;
-import com.example.nutroapp.statsdays_activity_05.StatsDayActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +27,7 @@ public class FreshForseActivity extends AppCompatActivity {
     ImageView imageView;
     private RecyclerView recyclerfresh;
     private List<FreshModel> freshModelList;
+    private AppCompatImageView backImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +45,14 @@ public class FreshForseActivity extends AppCompatActivity {
         // find id ... ##
         imageView = findViewById(R.id.waterImage);
         recyclerfresh = findViewById(R.id.recyclerfresh_id);
+        backImage = findViewById(R.id.imagebackcreate_id);
+
+        backImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
         // image view onClickListner ... ##
         imageView.setOnClickListener(new View.OnClickListener() {

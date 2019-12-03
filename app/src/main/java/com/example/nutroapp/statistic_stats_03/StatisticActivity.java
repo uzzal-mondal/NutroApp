@@ -1,6 +1,7 @@
 package com.example.nutroapp.statistic_stats_03;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -34,6 +35,7 @@ public class StatisticActivity extends AppCompatActivity {
    private List<StatisticModel> statisticModelList;
     private BubbleChart bubbleChart;
     private CircularProgressView progressView;
+    private AppCompatImageView backimage;
 
 
     @Override
@@ -48,6 +50,13 @@ public class StatisticActivity extends AppCompatActivity {
 
         setStatusColor(this, R.color.color_statistic);
         progressView = findViewById(R.id.staticsprogress);
+        backimage = findViewById(R.id.menubackimg_id);
+        backimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
         progressView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,7 +68,7 @@ public class StatisticActivity extends AppCompatActivity {
 
 
 
-        bubbleChart = (BubbleChart)findViewById(R.id.chart);
+        bubbleChart = findViewById(R.id.chart);
         BubbleDataSet bubbleDataSet = new BubbleDataSet(getList(), "Inducesmile");
         bubbleDataSet.setColors(ColorTemplate.COLORFUL_COLORS);
 

@@ -1,6 +1,7 @@
 package com.example.nutroapp.statsoverview_stats_04;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -26,6 +27,8 @@ public class StatsOverviewActivity extends AppCompatActivity {
     TextView overText;
     RecyclerView recyclerOverView;
     private List<OverviewModel> overviewModelList;
+    private AppCompatImageView backimage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +43,14 @@ public class StatsOverviewActivity extends AppCompatActivity {
         // find id..
         overText = findViewById(R.id.overviewtext);
         recyclerOverView = findViewById(R.id.recycleroverview_id);
+        backimage = findViewById(R.id.menuback_id);
+
+        backimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
         // another to activity ... ##
         overText.setOnClickListener(new View.OnClickListener() {

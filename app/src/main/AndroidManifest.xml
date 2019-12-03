@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".freshforse_social_06.FreshForseActivity"></activity>
+        <activity android:name=".freshforse_social_06convartingfragment.FreshForseActivity"></activity>
         <activity android:name=".statsdays_activity_05.StatsDayActivity"></activity>
         <activity android:name=".statsoverview_stats_04.StatsOverviewActivity">
 
@@ -26,7 +26,7 @@
 
         </activity>
         <activity
-            android:name=".dietaryhardinge_social_05.DietaryHardingeActivity"
+            android:name=".dietaryhardinge_social_05_convertfragment.DietaryHardingeActivity"
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity android:name=".evaolson_social_02.EvaOlsonActivity" />
         <activity android:name=".exploresecondactivity_activity_02.ExploreChartActivity">

@@ -1,6 +1,7 @@
 package com.example.nutroapp.planning_stats_06;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.core.content.ContextCompat;
 
 import android.app.Activity;
@@ -14,6 +15,8 @@ import com.example.nutroapp.R;
 
 public class PlanningActivity extends AppCompatActivity {
 
+    private AppCompatImageView backImg;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +28,14 @@ public class PlanningActivity extends AppCompatActivity {
         }
 
         setStatusColor(this, R.color.color_white);
+
+        backImg = findViewById(R.id.menubacktollbar_id);
+        backImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
 
     }

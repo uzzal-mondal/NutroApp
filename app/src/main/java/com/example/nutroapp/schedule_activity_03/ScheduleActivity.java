@@ -22,21 +22,16 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.Spinner;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.chivorn.smartmaterialspinner.SmartMaterialSpinner;
 import com.example.nutroapp.R;
 import com.example.nutroapp.evaolson_social_02.EvaOlsonActivity;
-import com.example.nutroapp.exploreactivity_Activity_01.ProfileExploreActivity;
-import com.example.nutroapp.exploresecondactivity_activity_02.ExploreChartActivity;
+import com.example.nutroapp.freshforse_social_06convartingfragment.FreshForseActivity;
+import com.example.nutroapp.planning_stats_06.PlanningActivity;
 import com.example.nutroapp.profileeva_social_04.ProfileEvaActivity;
 import com.example.nutroapp.profilelula_social_03.ProfileLulaActivity;
-import com.example.nutroapp.recipes_activity_05.RecipesActivity;
-import com.example.nutroapp.recipesweekly_activity_06.RecipesWeeklyActivity;
 import com.example.nutroapp.schedulenutrition_activity_04.ScheduleNutrationActivity;
 import com.example.nutroapp.todayspecial_social_01.TodayActivity;
 import com.google.android.material.navigation.NavigationView;
@@ -45,7 +40,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-public class ScheduleActivity extends AppCompatActivity {
+public class ScheduleActivity extends AppCompatActivity implements View.OnClickListener {
 
     private RecyclerView recyclerView;
     private RecyclerView recyclerViewSchedule;
@@ -54,7 +49,8 @@ public class ScheduleActivity extends AppCompatActivity {
 
     Spinner spinner;
     private SpinerAdapter spinerAdapter;
-    AppCompatTextView scheduleText;
+    private AppCompatTextView scheduleText;
+   private AppCompatImageView seachmenuImage;
 
    /* String month[] = {"January-February","Mearch-April","May-June",
             "July-August","September-Otober",
@@ -94,6 +90,8 @@ public class ScheduleActivity extends AppCompatActivity {
         scheduleText =  findViewById(R.id.text_schedule_id);
 
         //menu id find
+        seachmenuImage = findViewById(R.id.serchschedulemenu_id);
+        seachmenuImage.setOnClickListener(this);
         navigationView = findViewById(R.id.nav_schedule_id);
         drawerLayout = findViewById(R.id.activityschedule_drawer_id);
         toggle = new ActionBarDrawerToggle(this,drawerLayout,
@@ -126,9 +124,14 @@ public class ScheduleActivity extends AppCompatActivity {
                                 TodayActivity.class));
                         break;
 
-                    case R.id.caldendarid:
+                    case R.id.activity_nav_id:
                         startActivity(new Intent(ScheduleActivity.this,
                                 EvaOlsonActivity.class));
+                        break;
+
+                    case R.id.calendar_nav_id:
+                        startActivity(new Intent(ScheduleActivity.this,
+                                PlanningActivity.class));
                         break;
 
                     case R.id.account_nav_id:
@@ -301,4 +304,14 @@ public class ScheduleActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onClick(View view) {
+
+        if (view.getId() == R.id.serchschedulemenu_id){
+
+           startActivity(new Intent(ScheduleActivity.this,
+                   FreshForseActivity.class));
+        }
+
+    }
 }

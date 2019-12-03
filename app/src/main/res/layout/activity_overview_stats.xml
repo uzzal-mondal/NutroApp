@@ -13,7 +13,7 @@
         android:id="@+id/includelayout_id"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        layout="@layout/custom_toolbar_explore"
+        layout="@layout/custom_recipes_toolbar"
         android:layout_marginBottom="32dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

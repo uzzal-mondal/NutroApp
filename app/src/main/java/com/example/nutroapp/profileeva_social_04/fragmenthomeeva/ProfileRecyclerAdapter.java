@@ -1,4 +1,4 @@
-package com.example.nutroapp.profileeva_social_04;
+package com.example.nutroapp.profileeva_social_04.fragmenthomeeva;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -22,10 +22,12 @@ public class ProfileRecyclerAdapter extends RecyclerView
     private List<ProfileItemModel> profileItemModelList;
 
 
+
     // create a constructor.
     public ProfileRecyclerAdapter(Context context, List<ProfileItemModel> profileItemModelList) {
         this.context = context;
         this.profileItemModelList = profileItemModelList;
+
     }
     @NonNull
     @Override

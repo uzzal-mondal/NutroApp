@@ -1,4 +1,4 @@
-package com.example.nutroapp.dietaryhardinge_social_05;
+package com.example.nutroapp.dietaryhardinge_social_05_convertfragment;
 
 public class SpinnerModel {
 

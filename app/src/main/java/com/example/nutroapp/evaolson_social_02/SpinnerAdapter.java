@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.example.nutroapp.dietaryhardinge_social_05.SpinnerModel;
+import com.example.nutroapp.dietaryhardinge_social_05_convertfragment.SpinnerModel;
 
 public class SpinnerAdapter extends ArrayAdapter<SpinnerModel> {
 

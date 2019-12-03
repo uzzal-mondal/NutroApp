@@ -20,22 +20,19 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.example.nutroapp.R;
-import com.example.nutroapp.evaolson_social_02.EvaOlsonActivity;
+import com.example.nutroapp.dietaryhardinge_social_05_convertfragment.DietaryHardingeActivity;
 import com.example.nutroapp.exploresecondactivity_activity_02.ExploreChartActivity;
 import com.example.nutroapp.profileeva_social_04.ProfileEvaActivity;
-import com.example.nutroapp.profilelula_social_03.ProfileLulaActivity;
 import com.example.nutroapp.recipes_activity_05.RecipesActivity;
 import com.example.nutroapp.recipesweekly_activity_06.RecipesWeeklyActivity;
-import com.example.nutroapp.todayspecial_social_01.TodayActivity;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProfileExploreActivity extends AppCompatActivity {
+public class ProfileExploreActivity extends AppCompatActivity implements View.OnClickListener {
 
     private RecyclerView recyclerView;
     private RecyclerView recyclerCountView;
@@ -46,7 +43,8 @@ public class ProfileExploreActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle toggle;
     private NavigationView navigationView;
-    AppCompatImageView menuImageView;
+    private  AppCompatImageView menuImageView;
+    private  AppCompatImageView searchmenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,10 +71,15 @@ public class ProfileExploreActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recycler_explore_second_id);
         recyclerCountView = findViewById(R.id.recycler_explore_fast_count_id);
         buttonViewExplore = findViewById(R.id.button_explore_id);
+        buttonViewExplore.setOnClickListener(this);
 
         // find id nav
-        navigationView = findViewById(R.id.nv);
+        searchmenu = findViewById(R.id.searchtoolbar_id);
+        searchmenu.setOnClickListener(this);
+        navigationView = findViewById(R.id.navigation);
         drawerLayout = findViewById(R.id.actvity_drawer_id);
+
+        //menu create... ##
         toggle = new ActionBarDrawerToggle(this,drawerLayout,R.string.open,
                 R.string.close);
         drawerLayout.addDrawerListener(toggle);
@@ -85,7 +88,7 @@ public class ProfileExploreActivity extends AppCompatActivity {
         //getActionBar().setDisplayHomeAsUpEnabled(true);
 
         //menu image find .. ##
-        menuImageView = findViewById(R.id.menu_id);
+        menuImageView = findViewById(R.id.menubar_id);
 
 
         // menu item click listner..
@@ -138,20 +141,6 @@ public class ProfileExploreActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
-        // go to ProfileActivity class .. ##
-        buttonViewExplore.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                startActivity(new Intent(ProfileExploreActivity.this,
-                        ExploreChartActivity.class));
-            }
-        });
 
 
         // adapter initialize to Count .. ##
@@ -214,6 +203,26 @@ public class ProfileExploreActivity extends AppCompatActivity {
 
        window.setStatusBarColor(
                ContextCompat.getColor(activity,colorResourceId));
+
+
+    }
+
+    @Override
+    public void onClick(View view) {
+
+        // go to another activity... ##
+        if (view.getId() == R.id.button_explore_id){
+            startActivity(new Intent(ProfileExploreActivity.this,
+                    ExploreChartActivity.class));
+
+        }
+
+        // go to search activity from menu... ##
+         if (view.getId() == R.id.searchtoolbar_id){
+
+            startActivity(new Intent(ProfileExploreActivity.this,
+                    DietaryHardingeActivity.class));
+        }
 
 
     }

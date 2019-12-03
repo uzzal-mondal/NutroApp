@@ -6,7 +6,7 @@
     android:fitsSystemWindows="true"
     android:layout_height="match_parent"
     android:background="@color/color_white"
-    tools:context=".dietaryhardinge_social_05.DietaryHardingeActivity">
+    tools:context=".dietaryhardinge_social_05_convertfragment.DietaryHardingeActivity">
 
     <include
         layout="@layout/custom_toolbar_back"
@@ -29,7 +29,6 @@
         android:background="@drawable/bg_edittext_button_color"
         android:backgroundTint="#F1F7FB"
         android:fontFamily="@font/sans_medium"
-
         android:hint="Dietary"
         android:paddingLeft="16dp"
         android:textSize="16sp"
@@ -219,7 +218,7 @@
         android:layout_height="wrap_content"
 
         android:background="@color/color_white"
-        app:menu="@menu/bottom_menu"
+        app:menu="@menu/bottom_menu_evaolson"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"

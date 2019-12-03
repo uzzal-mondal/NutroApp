@@ -1,4 +1,4 @@
-package com.example.nutroapp.dietaryhardinge_social_05;
+package com.example.nutroapp.profileeva_social_04.fragmentcalendarhardiange;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -13,14 +13,15 @@ import com.example.nutroapp.R;
 
 import java.util.List;
 
-public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyViewHolder> {
+public class DietaryRecyclerAdapter extends RecyclerView.Adapter<DietaryRecyclerAdapter.MyViewHolder> {
 
     private Context context;
-    private List<ItemImgModel> itemImgModelList;
+    private List<DietaryImgModel> dietaryImgModels;
 
-    public RecyclerAdapter(Context context, List<ItemImgModel> itemImgModelList) {
+
+    public DietaryRecyclerAdapter(Context context, List<DietaryImgModel> dietaryImgModels) {
         this.context = context;
-        this.itemImgModelList = itemImgModelList;
+        this.dietaryImgModels = dietaryImgModels;
     }
 
     @NonNull
@@ -30,21 +31,23 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         View view = LayoutInflater.from(context).inflate(R.layout.item_hardinge_layout,
                 parent,false);
         MyViewHolder holder = new MyViewHolder(view);
-
         return holder;
+
+
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
-        holder.imgpro.setImageResource(itemImgModelList.get(position).getImage());
+        holder.imgpro.setImageResource(dietaryImgModels.get(position).getImage());
 
     }
 
     @Override
     public int getItemCount() {
-        return itemImgModelList.size();
+        return dietaryImgModels.size();
     }
+
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         ImageView imgpro;
@@ -53,4 +56,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
             imgpro = itemView.findViewById(R.id.profileimage);
         }
     }
+
+
 }

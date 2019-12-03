@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:id="@+id/constraintFragment_container_id"
     tools:context=".todayspecial_social_01.TodayActivity">
 
     <include
@@ -81,24 +82,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
 
-        app:layout_constraintBottom_toTopOf="@+id/bottom_menu_action_id"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav_id"
         app:layout_constraintTop_toBottomOf="@+id/textplaces"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-
-        android:id="@+id/bottom_menu_action_id"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@color/color_white"
-
-        app:menu="@menu/bottom_menu"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerplaceid" />
 
 
 

@@ -1,6 +1,7 @@
 package com.example.nutroapp.login_02;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 
@@ -24,6 +25,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private TextView textPass;
     private Button buttonLogin;
+
+    private AppCompatImageView toolbarimage;
 
 
     @Override
@@ -50,9 +53,21 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         // view find
         textPass = (TextView) findViewById(R.id.textForgotPass_id);
         buttonLogin = (Button) findViewById(R.id.button_login_id) ;
+        toolbarimage = findViewById(R.id.imagelogintoolbar_id);
         //setOnClick listner
         textPass.setOnClickListener(this);
         buttonLogin.setOnClickListener(this);
+
+
+        //back toolbar codding.
+        toolbarimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                onBackPressed();
+            }
+        });
+
 
 
       //  Toolbar toolbar = findViewById(R.id.customToolbar_color_back_id);

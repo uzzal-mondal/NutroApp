@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+
+   <!-- <include
+        layout="@layout/custom_toolbar_back"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+-->
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/dietarysearch"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_edittext_button_color"
+        android:backgroundTint="#F1F7FB"
+        android:fontFamily="@font/sans_medium"
+
+        android:hint="Dietary"
+        android:paddingLeft="16dp"
+        android:textSize="16sp"
+
+        app:layout_constraintBottom_toTopOf="@+id/constraintsecond"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--         new step start to new network.. -->
+
+    <!--    constraint to circle image view id-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintsecond"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/recyclerfresh_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dietarysearch">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/circularimage"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="#F0F6FA"
+            app:civ_border_color="#F0F6FA"
+            app:civ_border_width="2dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/circularimage2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/waterImage"
+            android:layout_width="30dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_glass"
+
+            app:layout_constraintBottom_toBottomOf="@+id/circularimage"
+            app:layout_constraintEnd_toEndOf="@+id/circularimage"
+            app:layout_constraintStart_toStartOf="@+id/circularimage"
+            app:layout_constraintTop_toTopOf="@+id/circularimage" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circularimage2"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="8dp"
+            android:src="#F0F6FA"
+            app:civ_border_color="#F0F6FA"
+            app:civ_border_width="2dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/circularimage"
+            app:layout_constraintRight_toLeftOf="@+id/circularimage3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_eva_circle"
+            app:layout_constraintBottom_toBottomOf="@+id/circularimage2"
+            app:layout_constraintEnd_toEndOf="@+id/circularimage2"
+            app:layout_constraintStart_toStartOf="@+id/circularimage2"
+            app:layout_constraintTop_toTopOf="@+id/circularimage" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/circularimage3"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:src="#F0F6FA"
+            app:civ_border_color="#F0F6FA"
+            app:civ_border_width="2dp"
+
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/circularimage2"
+            app:layout_constraintRight_toLeftOf="@+id/circularimage4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_tree"
+            app:layout_constraintBottom_toBottomOf="@+id/circularimage3"
+            app:layout_constraintEnd_toEndOf="@+id/circularimage3"
+            app:layout_constraintStart_toStartOf="@+id/circularimage3"
+            app:layout_constraintTop_toTopOf="@+id/circularimage3" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/circularimage4"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="#F0F6FA"
+            app:civ_border_color="#F0F6FA"
+            app:civ_border_width="2dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/circularimage3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_bread"
+            app:layout_constraintBottom_toBottomOf="@+id/circularimage4"
+            app:layout_constraintEnd_toEndOf="@+id/circularimage4"
+            app:layout_constraintStart_toStartOf="@+id/circularimage4"
+            app:layout_constraintTop_toTopOf="@+id/circularimage4" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    constrant is finish to circle-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerfresh_id"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintsecond">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+

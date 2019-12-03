@@ -1,6 +1,7 @@
 package com.example.nutroapp.statsdays_activity_05;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -29,6 +30,8 @@ public class StatsDayActivity extends AppCompatActivity {
     private Spinner spinner,spinndershowDay;
     TextView textSeven;
 
+    private AppCompatImageView backImg;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +52,14 @@ public class StatsDayActivity extends AppCompatActivity {
         spinner = findViewById(R.id.spinershowid);
         spinndershowDay = findViewById(R.id.spinershowdayid);
         textSeven = findViewById(R.id.sevenday);
+
+        backImg = findViewById(R.id.bakimage_day_id);
+        backImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
         // go to another activity.
         textSeven.setOnClickListener(new View.OnClickListener() {
