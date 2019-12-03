@@ -45,13 +45,13 @@ public class TodayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_today);
 
-        // Transparent action bar define ... ##
+      /*  // Transparent action bar define ... ##
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             getWindow()
                     .getDecorView()
                     .setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         }
-        setStatusBarColor(this, R.color.white);
+        setStatusBarColor(this, R.color.white);*/
 
 
        /* // fragment default to set a Home Activity.. ##
@@ -65,7 +65,7 @@ public class TodayActivity extends AppCompatActivity {
         }
 */
 
-        recyclerView = findViewById(R.id.recyclertoday);
+       /* recyclerView = findViewById(R.id.recyclertoday);
         recyclerViewPlace = findViewById(R.id.recyclerplaceid);
         todayText = findViewById(R.id.todaytext);
         imageback = findViewById(R.id.backmenu_id);
@@ -126,7 +126,7 @@ public class TodayActivity extends AppCompatActivity {
 
 
 
-     /*       second     -----------------------------------------------   */
+     *//*       second     -----------------------------------------------   *//*
         // next places recycler and adapter .. ##
 
         SecondTodayRecyclerAdapter adapter1 = new
@@ -146,11 +146,11 @@ public class TodayActivity extends AppCompatActivity {
                 SecondTodayRecyclerAdapter(this,modelList);
         recyclerViewPlace.setAdapter(todayRecyclerAdapter);
 
-/*
+*//*
 
 
-         */
-/*.................. bottom navigation view ...................*//*
+         *//*
+         *//*.................. bottom navigation view ...................*//**//*
 
 
         navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -182,7 +182,7 @@ public class TodayActivity extends AppCompatActivity {
         });
 
 
-*/
+*//*
 
     }
 
@@ -192,5 +192,7 @@ public class TodayActivity extends AppCompatActivity {
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.setStatusBarColor(
                 ContextCompat.getColor(activity, colorResourceId));
+    }*/
+
     }
 }

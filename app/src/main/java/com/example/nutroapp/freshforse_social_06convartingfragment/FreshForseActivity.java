@@ -34,7 +34,7 @@ public class FreshForseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fresh_forse);
 
-        // Transparent action bar define ... ##
+      /*  // Transparent action bar define ... ##
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             getWindow()
                     .getDecorView()
@@ -79,5 +79,7 @@ public class FreshForseActivity extends AppCompatActivity {
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.setStatusBarColor(
                 ContextCompat.getColor(activity,colorResourceId));
+    }*/
+
     }
 }

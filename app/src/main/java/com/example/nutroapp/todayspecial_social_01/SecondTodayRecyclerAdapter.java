@@ -13,10 +13,9 @@ import com.example.nutroapp.R;
 
 import java.util.List;
 
-public class SecondTodayRecyclerAdapter extends
-        RecyclerView.Adapter<SecondTodayRecyclerAdapter.MyViewHolder> {
+public class SecondTodayRecyclerAdapter {
 
-    private Context context;
+  /*  private Context context;
     private List<SecondTodayModel> secondTodayModels;
 
     public SecondTodayRecyclerAdapter(Context context, List<SecondTodayModel> secondTodayModels) {
@@ -58,5 +57,5 @@ public class SecondTodayRecyclerAdapter extends
             imageTs = itemView.findViewById(R.id.image_itemsecond);
            // headdingText = itemView.findViewById(R.id.text_itemsecond);
         }
-    }
+    }*/
 }

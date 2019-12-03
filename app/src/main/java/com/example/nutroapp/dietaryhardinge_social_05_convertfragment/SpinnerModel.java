@@ -2,7 +2,7 @@ package com.example.nutroapp.dietaryhardinge_social_05_convertfragment;
 
 public class SpinnerModel {
 
-    private int id;
+   /* private int id;
     private String vegName;
 
     public SpinnerModel() {
@@ -24,5 +24,5 @@ public class SpinnerModel {
 
     public void setVegName(String vegName) {
         this.vegName = vegName;
-    }
+    }*/
 }

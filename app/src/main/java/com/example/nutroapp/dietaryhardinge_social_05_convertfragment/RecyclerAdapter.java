@@ -13,9 +13,9 @@ import com.example.nutroapp.R;
 
 import java.util.List;
 
-public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyViewHolder> {
+public class RecyclerAdapter {
 
-    private Context context;
+  /*  private Context context;
     private List<ItemImgModel> itemImgModelList;
 
     public RecyclerAdapter(Context context, List<ItemImgModel> itemImgModelList) {
@@ -52,5 +52,5 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
             super(itemView);
             imgpro = itemView.findViewById(R.id.profileimage);
         }
-    }
+    }*/
 }

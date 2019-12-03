@@ -3,7 +3,7 @@ package com.example.nutroapp.todayspecial_social_01;
 public class TodayModel {
 
 
-    private int mainImg;
+  /*  private int mainImg;
     private String timeTv;
 
     public TodayModel(int mainImg, String timeTv) {
@@ -25,5 +25,5 @@ public class TodayModel {
 
     public void setTimeTv(String timeTv) {
         this.timeTv = timeTv;
-    }
+    }*/
 }

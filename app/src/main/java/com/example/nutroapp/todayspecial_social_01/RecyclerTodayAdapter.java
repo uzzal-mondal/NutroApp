@@ -14,9 +14,9 @@ import com.example.nutroapp.R;
 
 import java.util.List;
 
-public class RecyclerTodayAdapter extends RecyclerView.Adapter<RecyclerTodayAdapter.MyViewHolder> {
+public class RecyclerTodayAdapter {
 
-   private Context context;
+  /* private Context context;
    private List<TodayModel>  todayModelList;
 
 
@@ -64,5 +64,5 @@ public class RecyclerTodayAdapter extends RecyclerView.Adapter<RecyclerTodayAdap
 
 
         }
-    }
+    }*/
 }

@@ -10,9 +10,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-public class SpinnerAdapter extends ArrayAdapter<SpinnerModel> {
+public class SpinnerAdapter {
 
-    private Context context;
+  /*  private Context context;
     private SpinnerModel[] spinnerModels;
 
     public SpinnerAdapter(@NonNull Context context, int textViewResourceId,
@@ -49,5 +49,5 @@ public class SpinnerAdapter extends ArrayAdapter<SpinnerModel> {
         label.setText(spinnerModels[position].getVegName());
 
         return label;
-    }
+    }*/
 }

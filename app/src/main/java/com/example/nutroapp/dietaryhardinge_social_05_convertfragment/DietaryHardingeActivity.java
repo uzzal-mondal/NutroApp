@@ -25,7 +25,7 @@ import java.util.List;
 
 public class DietaryHardingeActivity extends AppCompatActivity {
 
-    RecyclerView recyclerView;
+   /* RecyclerView recyclerView;
     List<ItemImgModel> itemImgModelList;
    private AppCompatTextView textView;
    private AppCompatImageView backImage;
@@ -132,9 +132,9 @@ public class DietaryHardingeActivity extends AppCompatActivity {
                                        View view, int position, long l) {
 
                 SpinnerModel spinnerModel = spinnerAdapter.getItem(position);
-               /* Toast.makeText(ScheduleActivity.this,
+               *//* Toast.makeText(ScheduleActivity.this,
                         "Id: " + monthModel.getId() + " \nname: " +
-                        monthModel.getMonthName(), Toast.LENGTH_SHORT).show();*/
+                        monthModel.getMonthName(), Toast.LENGTH_SHORT).show();*//*
             }
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
@@ -157,5 +157,5 @@ public class DietaryHardingeActivity extends AppCompatActivity {
                 ContextCompat.getColor(activity,colorResourceId));
 
 
-    }
+    }*/
 }
