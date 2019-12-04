@@ -11,38 +11,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".freshforse_social_06convartingfragment.FreshForseActivity"></activity>
-        <activity android:name=".statsdays_activity_05.StatsDayActivity"></activity>
-        <activity android:name=".statsoverview_stats_04.StatsOverviewActivity">
-
-
-
-        </activity>
+        <activity android:name=".FreshSearchActivity.FreshSearchActivity"></activity>
+        <activity android:name=".freshforse_social_06convartingfragment.FreshForseActivity" />
+        <activity android:name=".statsdays_activity_05.StatsDayActivity" />
+        <activity android:name=".statsoverview_stats_04.StatsOverviewActivity"></activity>
         <activity android:name=".statistic_stats_03.StatisticActivity" />
         <activity android:name=".planning_stats_06.PlanningActivity" />
         <activity android:name=".overview_stats_02.OverviewActivity" />
         <activity android:name=".statasactivity_stats_01.StatasActivity" />
-        <activity android:name=".todayspecial_social_01.TodayActivity">
-
-        </activity>
+        <activity android:name=".todayspecial_social_01.TodayActivity"></activity>
         <activity
             android:name=".dietaryhardinge_social_05_convertfragment.DietaryHardingeActivity"
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity android:name=".evaolson_social_02.EvaOlsonActivity" />
-        <activity android:name=".exploresecondactivity_activity_02.ExploreChartActivity">
-
-
-
-        </activity>
+        <activity android:name=".exploresecondactivity_activity_02.ExploreChartActivity"></activity>
         <activity android:name=".recipesweekly_activity_06.RecipesWeeklyActivity" />
         <activity android:name=".recipes_activity_05.RecipesActivity" />
         <activity android:name=".schedulenutrition_activity_04.ScheduleNutrationActivity" />
         <activity android:name=".exploreactivity_Activity_01.ProfileExploreActivity" />
-        <activity android:name=".MainActivity">
-
-
-
-        </activity>
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".schedule_activity_03.ScheduleActivity" />
         <activity android:name=".profilelula_social_03.ProfileLulaActivity" />
         <activity android:name=".profileeva_social_04.ProfileEvaActivity" />
@@ -53,18 +40,16 @@
         <activity android:name=".login_02.LoginActivity" />
         <activity android:name=".signup_01.CreateAcountActivity" />
         <activity android:name=".signup_01.NutroSignUpActivity" />
-        <activity android:name=".onboarding_01.WelcomeNutro"></activity>
-        <activity android:name=".splashscreen.SplashScreenActivity"
+        <activity android:name=".onboarding_01.WelcomeNutro" />
+        <activity
+            android:name=".splashscreen.SplashScreenActivity"
             android:theme="@style/AppTheme.Launcher">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-
-
     </application>
 
 </manifest>

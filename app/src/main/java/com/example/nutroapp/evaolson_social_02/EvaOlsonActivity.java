@@ -15,6 +15,7 @@ import android.widget.AdapterView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.example.nutroapp.FreshSearchActivity.FreshSearchActivity;
 import com.example.nutroapp.R;
 import com.example.nutroapp.profilelula_social_03.ProfileLulaActivity;
 
@@ -24,6 +25,7 @@ public class EvaOlsonActivity extends AppCompatActivity {
     Spinner spin;
     SpinnerAdapter spinnerAdapter;
     AppCompatImageView backmenu;
+    AppCompatImageView searchimage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,11 +45,21 @@ public class EvaOlsonActivity extends AppCompatActivity {
         evaTv = findViewById(R.id.evatex);
         spin = findViewById(R.id.spinner);
         backmenu = findViewById(R.id.backmenu_id);
+        searchimage = findViewById(R.id.searchtool);
 
         backmenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onBackPressed();
+            }
+        });
+
+
+        searchimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(EvaOlsonActivity.this,
+                        FreshSearchActivity.class));
             }
         });
 

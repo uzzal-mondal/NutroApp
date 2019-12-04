@@ -15,6 +15,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
+import com.example.nutroapp.FreshSearchActivity.FreshSearchActivity;
 import com.example.nutroapp.R;
 import com.example.nutroapp.overview_stats_02.OverviewActivity;
 import com.example.nutroapp.statsdays_activity_05.StatsDayActivity;
@@ -28,6 +29,7 @@ public class StatsOverviewActivity extends AppCompatActivity {
     RecyclerView recyclerOverView;
     private List<OverviewModel> overviewModelList;
     private AppCompatImageView backimage;
+    private AppCompatImageView serchimgage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +46,15 @@ public class StatsOverviewActivity extends AppCompatActivity {
         overText = findViewById(R.id.overviewtext);
         recyclerOverView = findViewById(R.id.recycleroverview_id);
         backimage = findViewById(R.id.menuback_id);
+        serchimgage = findViewById(R.id.search);
+
+        serchimgage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(StatsOverviewActivity.this,
+                        FreshSearchActivity.class));
+            }
+        });
 
         backimage.setOnClickListener(new View.OnClickListener() {
             @Override

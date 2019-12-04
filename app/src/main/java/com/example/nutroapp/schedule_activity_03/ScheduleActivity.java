@@ -26,11 +26,13 @@ import android.widget.DatePicker;
 import android.widget.Spinner;
 
 import com.chivorn.smartmaterialspinner.SmartMaterialSpinner;
+import com.example.nutroapp.FreshSearchActivity.FreshSearchActivity;
 import com.example.nutroapp.R;
 import com.example.nutroapp.evaolson_social_02.EvaOlsonActivity;
 
 import com.example.nutroapp.planning_stats_06.PlanningActivity;
 import com.example.nutroapp.profileeva_social_04.ProfileEvaActivity;
+import com.example.nutroapp.profileeva_social_04.fragmentsearchfresh.FragmentSearchFresh;
 import com.example.nutroapp.profilelula_social_03.ProfileLulaActivity;
 import com.example.nutroapp.schedulenutrition_activity_04.ScheduleNutrationActivity;
 
@@ -67,7 +69,8 @@ public class ScheduleActivity extends AppCompatActivity implements View.OnClickL
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle toggle;
     private NavigationView navigationView;
-    AppCompatImageView menuImageView;
+    AppCompatImageView menuImageView,searchImageView;
+
 
 
     @Override
@@ -84,8 +87,10 @@ public class ScheduleActivity extends AppCompatActivity implements View.OnClickL
         setStatusColor(this,R.color.color_white);
 
         //find view
+
+
         recyclerView =  findViewById(R.id.recycler_participants_id);
-        recyclerViewSchedule = (RecyclerView) findViewById(R.id.recyclerSecondSchedule_id);
+        recyclerViewSchedule =  findViewById(R.id.recyclerSecondSchedule_id);
         spinner = findViewById(R.id.spinner_id);
         buttonCalendar =  findViewById(R.id.calendarView_id);
         scheduleText =  findViewById(R.id.text_schedule_id);
@@ -109,6 +114,7 @@ public class ScheduleActivity extends AppCompatActivity implements View.OnClickL
                 drawerLayout.openDrawer(GravityCompat.START);
             }
         });
+
 
 
         //navigation listener
@@ -311,8 +317,8 @@ public class ScheduleActivity extends AppCompatActivity implements View.OnClickL
 
         if (view.getId() == R.id.serchschedulemenu_id){
 
-          /* startActivity(new Intent(ScheduleActivity.this,
-                   FreshForseActivity.class));*/
+           startActivity(new Intent(ScheduleActivity.this,
+                   FreshSearchActivity.class));
         }
 
     }

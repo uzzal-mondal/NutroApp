@@ -20,6 +20,7 @@ public class PlanningActivity extends AppCompatActivity {
 
     private AppCompatImageView backImg;
     private AppCompatTextView plantext;
+    private AppCompatImageView serchImgae;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,7 @@ public class PlanningActivity extends AppCompatActivity {
         }
 
         setStatusColor(this, R.color.color_white);
+
 
         plantext = findViewById(R.id.planningtex);
         plantext.setOnClickListener(new View.OnClickListener() {

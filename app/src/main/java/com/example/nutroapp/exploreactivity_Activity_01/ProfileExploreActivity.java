@@ -22,6 +22,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 
+import com.example.nutroapp.FreshSearchActivity.FreshSearchActivity;
 import com.example.nutroapp.R;
 import com.example.nutroapp.exploresecondactivity_activity_02.ExploreChartActivity;
 import com.example.nutroapp.profileeva_social_04.ProfileEvaActivity;
@@ -213,8 +214,8 @@ public class ProfileExploreActivity extends AppCompatActivity implements View.On
         // go to search activity from menu... ##
         if (view.getId() == R.id.searchtoolbar_id) {
 
-            /*startActivity(new Intent(ProfileExploreActivity.this,
-                    DietaryHardingeActivity.class));*/
+            startActivity(new Intent(ProfileExploreActivity.this,
+                    FreshSearchActivity.class));
         }
 
 

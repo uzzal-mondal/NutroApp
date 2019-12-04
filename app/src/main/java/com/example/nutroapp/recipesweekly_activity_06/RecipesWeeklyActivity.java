@@ -16,6 +16,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
+import com.example.nutroapp.FreshSearchActivity.FreshSearchActivity;
 import com.example.nutroapp.R;
 import com.example.nutroapp.evaolson_social_02.EvaOlsonActivity;
 import com.example.nutroapp.schedule_activity_03.ScheduleActivity;
@@ -30,6 +31,7 @@ public class RecipesWeeklyActivity extends AppCompatActivity {
    private List<RecipesWeeklyModels> recipesWeeklyModelList;
    private AppCompatTextView textView;
    private AppCompatImageView backimageview;
+   private AppCompatImageView searchImg;
 
 
     @Override
@@ -47,6 +49,7 @@ public class RecipesWeeklyActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerweeklyid);
         textView = findViewById(R.id.recipes_text);
         backimageview = findViewById(R.id.menuback_id);
+        searchImg = findViewById(R.id.search);
 
 
         // back button set... ##
@@ -54,6 +57,14 @@ public class RecipesWeeklyActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 onBackPressed();
+            }
+        });
+
+        searchImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(RecipesWeeklyActivity.this,
+                        FreshSearchActivity.class));
             }
         });
 

@@ -15,6 +15,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
+import com.example.nutroapp.FreshSearchActivity.FreshSearchActivity;
 import com.example.nutroapp.R;
 import com.example.nutroapp.recipesweekly_activity_06.RecipesWeeklyActivity;
 import com.example.nutroapp.schedule_activity_03.ScheduleActivity;
@@ -29,6 +30,7 @@ public class RecipesActivity extends AppCompatActivity {
     private TextView recipText;
 
     private AppCompatImageView imageViewback;
+    private AppCompatImageView searchimage;
 
 
     @Override
@@ -46,10 +48,19 @@ public class RecipesActivity extends AppCompatActivity {
         // image back system .. ##
 
         imageViewback = findViewById(R.id.menuback_id);
+        searchimage = findViewById(R.id.search);
         imageViewback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onBackPressed();
+            }
+        });
+
+        searchimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(RecipesActivity.this,
+                        FreshSearchActivity.class));
             }
         });
 

@@ -16,6 +16,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
+import com.example.nutroapp.FreshSearchActivity.FreshSearchActivity;
 import com.example.nutroapp.R;
 import com.example.nutroapp.planning_stats_06.PlanningActivity;
 import com.example.nutroapp.profileeva_social_04.ProfileEvaActivity;
@@ -30,6 +31,7 @@ public class ProfileLulaActivity extends AppCompatActivity {
     private StaggeredGridLayoutManager staggeredGridLayoutManager;
     private AppCompatTextView textViewLulaLong;
     private AppCompatImageView backtoolimage;
+    private AppCompatImageView searchimage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,11 +51,20 @@ public class ProfileLulaActivity extends AppCompatActivity {
         textViewLulaLong =  findViewById(R.id.text_profile_lua_long_id);
         recyclerViewItem =  findViewById(R.id.recycler_lula_long_id);
         backtoolimage = findViewById(R.id.backtool_id);
+        searchimage = findViewById(R.id.searchcustomtool);
 
         backtoolimage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onBackPressed();
+            }
+        });
+
+        searchimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ProfileLulaActivity.this,
+                        FreshSearchActivity.class));
             }
         });
 

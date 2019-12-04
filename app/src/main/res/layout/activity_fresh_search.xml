@@ -5,8 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_white">
-
+    android:background="@color/color_white"
+    tools:context=".FreshSearchActivity.FreshSearchActivity">
 
 
     <include
@@ -44,7 +44,7 @@
 
 
 
-<!--         new step start to new network.. -->
+    <!--         new step start to new network.. -->
 
     <!--    constraint to circle image view id-->
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -164,7 +164,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/circularimage4"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-<!--    constrant is finish to circle-->
+    <!--    constrant is finish to circle-->
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -177,9 +177,9 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintsecond"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
-    </androidx.recyclerview.widget.RecyclerView>
+
 
 
 
