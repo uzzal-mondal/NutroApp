@@ -23,7 +23,7 @@ import com.tbuonomo.viewpagerdotsindicator.DotsIndicator;
 public class FragmentHomeEva extends Fragment {
 
     private Context context;
-    private RecyclerView recyclerView;
+    private RecyclerView recyclerViewhome;
     private ProfileRecyclerAdapter recyclerAdapter;
 
 
@@ -34,6 +34,7 @@ public class FragmentHomeEva extends Fragment {
     private BottomNavigationView bottomNavigationView;
     private AppCompatImageView backtoomenuimage;
     private ActionBar toolbar;
+
 
 
 
@@ -56,26 +57,22 @@ public class FragmentHomeEva extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        recyclerView = view.findViewById(R.id.recyclerView_pro_eva_id);
+        recyclerViewhome = view.findViewById(R.id.recyclerView_pro_eva_id);
 
         // this is for find all view ...##
         textViewEvaOlson = view.findViewById(R.id.text_main_eva_olson_id);
         viewPager = view.findViewById(R.id.viewPagerRecent_id);
         indicator =view.findViewById(R.id.inidicator_recent_id);
         backtoomenuimage = view.findViewById(R.id.menuback_id);
-       /* backtoomenuimage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                // back button listner..##
-            }
-        });*/
-
-        recyclerAdapter = new ProfileRecyclerAdapter(context, ProfileItemModel.getProfileItemModellist());
+        recyclerAdapter = new ProfileRecyclerAdapter(context,
+                ProfileItemModel.getProfileItemModellist());
         //recycler, view type
-        recyclerView.setLayoutManager(new LinearLayoutManager
+        recyclerViewhome.setLayoutManager(new LinearLayoutManager
                 (context,RecyclerView.HORIZONTAL,false));
-        recyclerView.setAdapter(recyclerAdapter);
+        recyclerViewhome.setAdapter(recyclerAdapter);
+
+
 
 
 

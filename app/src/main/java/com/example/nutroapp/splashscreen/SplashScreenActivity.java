@@ -36,7 +36,6 @@ public class SplashScreenActivity extends AppCompatActivity {
                     getDecorView()
                     .setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         }
-
         setStatusBarColor(this, R.color.white);
 
         new Handler().postDelayed(new Runnable() {
@@ -49,10 +48,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         }, 500);
 
 
-
     }
-
-
 
     void setStatusBarColor(Activity activity, int colorResourceID) {
         Window window = activity.getWindow();

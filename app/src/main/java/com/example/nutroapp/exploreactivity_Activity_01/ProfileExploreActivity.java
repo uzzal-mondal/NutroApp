@@ -22,7 +22,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 
-import com.example.nutroapp.FreshSearchActivity.FreshSearchActivity;
+import com.example.nutroapp.FreshSearchActivityPack.FreshSearchActivity;
 import com.example.nutroapp.R;
 import com.example.nutroapp.exploresecondactivity_activity_02.ExploreChartActivity;
 import com.example.nutroapp.profileeva_social_04.ProfileEvaActivity;

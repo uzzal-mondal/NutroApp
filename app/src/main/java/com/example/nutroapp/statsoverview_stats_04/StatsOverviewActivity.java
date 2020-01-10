@@ -15,9 +15,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-import com.example.nutroapp.FreshSearchActivity.FreshSearchActivity;
+import com.example.nutroapp.FreshSearchActivityPack.FreshSearchActivity;
 import com.example.nutroapp.R;
-import com.example.nutroapp.overview_stats_02.OverviewActivity;
 import com.example.nutroapp.statsdays_activity_05.StatsDayActivity;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.example.nutroapp.FreshSearchActivity;
+package com.example.nutroapp.FreshSearchActivityPack;
 
 import android.content.Context;
 import android.graphics.Color;

@@ -1,4 +1,4 @@
-package com.example.nutroapp.FreshSearchActivity;
+package com.example.nutroapp.FreshSearchActivityPack;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;

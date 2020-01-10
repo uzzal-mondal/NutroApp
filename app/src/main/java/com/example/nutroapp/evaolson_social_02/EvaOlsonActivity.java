@@ -15,7 +15,7 @@ import android.widget.AdapterView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.example.nutroapp.FreshSearchActivity.FreshSearchActivity;
+import com.example.nutroapp.FreshSearchActivityPack.FreshSearchActivity;
 import com.example.nutroapp.R;
 import com.example.nutroapp.profilelula_social_03.ProfileLulaActivity;
 

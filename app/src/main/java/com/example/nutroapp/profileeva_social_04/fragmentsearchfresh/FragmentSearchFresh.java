@@ -55,21 +55,7 @@ public class FragmentSearchFresh extends Fragment {
         recyclerfresh = view.findViewById(R.id.recyclerfresh_id);
         backImage = view.findViewById(R.id.imagebackcreate_id);
 
-        /*backImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-               // onBackPressed();
-            }
-        });
 
-        // image view onClickListner ... ##
-        imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-               *//* startActivity(new Intent(FreshForseActivity.this,
-                        StatasActivity.class));*//*
-            }
-        });*/
 
 
 

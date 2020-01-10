@@ -14,12 +14,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.TextView;
 
-import com.example.nutroapp.FreshSearchActivity.FreshSearchActivity;
+import com.example.nutroapp.FreshSearchActivityPack.FreshSearchActivity;
 import com.example.nutroapp.R;
 import com.example.nutroapp.planning_stats_06.PlanningActivity;
-import com.example.nutroapp.profileeva_social_04.ProfileEvaActivity;
 
 import java.util.ArrayList;
 import java.util.List;

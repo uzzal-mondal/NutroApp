@@ -52,8 +52,6 @@ public class ProfileEvaActivity extends AppCompatActivity implements View.OnClic
         imageViewBack = findViewById(R.id.menuback_id);
         imageViewBack.setOnClickListener(this);
 
-        loadFragment(new FragmentHomeEva());
-
 
         // bottom navigation fragment in android ... ##
         bottomNavigationView = findViewById(R.id.bottom_navigation_id);
@@ -71,28 +69,27 @@ public class ProfileEvaActivity extends AppCompatActivity implements View.OnClic
                     case R.id.home_bottom_item:
                         fragment = new FragmentHomeEva();
                         loadFragment(fragment);
-                        break;
+                        return true;
 
                     case R.id.search_bottom_item:
                         fragment = new FragmentSearchFresh();
                         loadFragment(fragment);
-                        break;
+                        return true;
 
                     case R.id.calendar_bottom_item:
                         fragment = new FragmentCalendarHardiange();
                         loadFragment(fragment);
-                        break;
+                        return true;
 
 
                     case R.id.wish_bottom_item:
                         fragment = new FragmentWishToday();
                         loadFragment(fragment);
-
-                        break;
+                        return true;
 
                 }
 
-                return true;
+                return false;
             }
         });
 
@@ -117,7 +114,7 @@ public class ProfileEvaActivity extends AppCompatActivity implements View.OnClic
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.menuback_id:
                 finish();
                 break;

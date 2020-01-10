@@ -14,11 +14,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.TextView;
 
-import com.example.nutroapp.FreshSearchActivity.FreshSearchActivity;
+import com.example.nutroapp.FreshSearchActivityPack.FreshSearchActivity;
 import com.example.nutroapp.R;
-import com.example.nutroapp.evaolson_social_02.EvaOlsonActivity;
 import com.example.nutroapp.schedule_activity_03.ScheduleActivity;
 
 

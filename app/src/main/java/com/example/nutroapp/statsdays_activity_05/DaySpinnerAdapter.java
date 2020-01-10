@@ -57,7 +57,7 @@ public class DaySpinnerAdapter extends ArrayAdapter<DaySpinnerModel> {
 
         TextView labeltv;
 
-         labeltv = (TextView) super.getView(position, convertView, parent);
+        labeltv = (TextView) super.getView(position, convertView, parent);
         labeltv.setTextColor(Color.BLACK);
         labeltv.setText(daySpinnerModels[position].getStatDayName());
 

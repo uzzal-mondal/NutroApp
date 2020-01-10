@@ -1,4 +1,4 @@
-package com.example.nutroapp.FreshSearchActivity;
+package com.example.nutroapp.FreshSearchActivityPack;
 
 public class FreshSearchModels {
 

@@ -26,13 +26,11 @@ import android.widget.DatePicker;
 import android.widget.Spinner;
 
 import com.chivorn.smartmaterialspinner.SmartMaterialSpinner;
-import com.example.nutroapp.FreshSearchActivity.FreshSearchActivity;
+import com.example.nutroapp.FreshSearchActivityPack.FreshSearchActivity;
 import com.example.nutroapp.R;
 import com.example.nutroapp.evaolson_social_02.EvaOlsonActivity;
 
 import com.example.nutroapp.planning_stats_06.PlanningActivity;
-import com.example.nutroapp.profileeva_social_04.ProfileEvaActivity;
-import com.example.nutroapp.profileeva_social_04.fragmentsearchfresh.FragmentSearchFresh;
 import com.example.nutroapp.profilelula_social_03.ProfileLulaActivity;
 import com.example.nutroapp.schedulenutrition_activity_04.ScheduleNutrationActivity;
 
